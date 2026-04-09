@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EnterpriseMonitor - AI驱动的企业全域智能经营仪表盘</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg-primary:#0a0e17;--bg-secondary:#111827;--bg-card:#1a1f2e;--bg-card-hover:#242a3d;--bg-panel:#131820;
+  --border-color:#2a3148;--border-light:#1e2538;
+  --text-primary:#e5e7eb;--text-secondary:#9ca3af;--text-muted:#6b7280;--text-bright:#f9fafb;
+  --accent-blue:#3b82f6;--accent-cyan:#06b6d4;--accent-green:#10b981;--accent-yellow:#f59e0b;
+  --accent-orange:#f97316;--accent-red:#ef4444;--accent-purple:#8b5cf6;--accent-pink:#ec4899;
+  --green-bg:rgba(16,185,129,.12);--red-bg:rgba(239,68,68,.12);--yellow-bg:rgba(245,158,11,.12);
+  --blue-bg:rgba(59,130,246,.12);--orange-bg:rgba(249,115,22,.12);--purple-bg:rgba(139,92,246,.12);
+  --font-mono:'SF Mono','Cascadia Code','Fira Code','JetBrains Mono',monospace;
+  --font-sans:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
+  --radius-sm:4px;--radius-md:6px;--radius-lg:8px;
+  --topbar-height:38px;--left-width:48px;
+}
+html,body{height:100%;font-family:var(--font-sans);background:var(--bg-primary);color:var(--text-primary);font-size:12px;line-height:1.5;overflow:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:3px}
+
+/* === App shell: topbar + main === */
+.app{display:flex;flex-direction:column;height:100vh}
+.topbar{height:var(--topbar-height);background:var(--bg-secondary);border-bottom:1px solid var(--border-color);display:flex;align-items:center;padding:0 10px;gap:6px;flex-shrink:0;z-index:100}
+.main-wrap{flex:1;display:flex;overflow:hidden}
+
+/* === Left icon sidebar (like WM) === */
+.left-icons{width:var(--left-width);background:var(--bg-panel);border-right:1px solid var(--border-color);display:flex;flex-direction:column;align-items:center;padding:6px 0;gap:2px;flex-shrink:0;overflow-y:auto}
+.li-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);cursor:pointer;color:var(--text-muted);transition:all .15s;border:none;background:none;font-size:16px;position:relative}
+.li-btn:hover{background:var(--bg-card);color:var(--text-primary)}
+.li-btn.active{background:var(--blue-bg);color:var(--accent-blue)}
+.li-btn .badge{position:absolute;top:2px;right:2px;min-width:14px;height:14px;border-radius:7px;font-size:8px;font-weight:700;font-family:var(--font-mono);display:flex;align-items:center;justify-content:center;padding:0 3px}
+.li-sep{width:24px;height:1px;background:var(--border-color);margin:4px 0}
+
+/* === 2-column content (WM style: left ~60%, right ~40%) === */
+.content-body{flex:1;display:flex;overflow:hidden}
+.col-left{flex:0 0 60%;max-width:60%;display:flex;flex-direction:column;overflow:hidden;border-right:1px solid var(--border-color)}
+.col-right{flex:1;display:flex;flex-direction:column;overflow:hidden}
+
+/* Map area: upper-left, about 42% viewport height */
+.map-area{flex:0 0 42vh;position:relative;background:var(--bg-primary);border-bottom:1px solid var(--border-color);overflow:hidden}
+.map-area svg{width:100%;height:100%}
+.map-controls{position:absolute;top:8px;left:8px;display:flex;gap:4px}
+.map-ctrl-btn{background:rgba(17,24,39,.85);border:1px solid var(--border-color);border-radius:var(--radius-sm);padding:3px 8px;font-size:10px;color:var(--text-secondary);cursor:pointer;backdrop-filter:blur(4px)}
+.map-ctrl-btn.active{background:var(--accent-blue);color:#fff;border-color:var(--accent-blue)}
+.map-legend{position:absolute;bottom:8px;left:8px;display:flex;gap:8px;font-size:9px;background:rgba(10,14,23,.8);padding:3px 8px;border-radius:var(--radius-sm)}
+
+/* Below-map scrollable area */
+.below-map{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:1px}
+
+/* Right column scrollable */
+.right-scroll{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:1px}
+
+/* === Topbar elements === */
+.logo{font-size:13px;font-weight:700;color:var(--text-bright);letter-spacing:-.3px;white-space:nowrap}
+.logo-sub{font-size:9px;color:var(--accent-blue);margin-left:4px;font-weight:400}
+.ehi-badge{display:flex;align-items:center;gap:4px;background:var(--green-bg);border:1px solid rgba(16,185,129,.3);padding:2px 8px;border-radius:var(--radius-md);cursor:pointer}
+.ehi-badge .score{font-size:14px;font-weight:700;color:var(--accent-green);font-family:var(--font-mono)}
+.ehi-badge .label{font-size:8px;color:var(--text-muted);text-transform:uppercase}
+.top-sep{width:1px;height:18px;background:var(--border-color)}
+.top-spacer{flex:1}
+.nav-tabs{display:flex;gap:1px;background:var(--border-color);border-radius:var(--radius-md);overflow:hidden}
+.nav-tab{padding:3px 12px;font-size:10px;cursor:pointer;background:var(--bg-card);color:var(--text-muted);transition:all .15s;border:none;white-space:nowrap}
+.nav-tab.active{background:var(--accent-blue);color:#fff}
+.nav-tab:hover:not(.active){background:var(--bg-card-hover);color:var(--text-primary)}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--accent-green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.live-label{font-size:9px;color:var(--accent-green);font-weight:600;font-family:var(--font-mono)}
+.alert-pills{display:flex;gap:3px}
+.alert-pill{font-size:9px;font-weight:600;font-family:var(--font-mono);padding:1px 6px;border-radius:3px;cursor:pointer}
+.search-box{display:flex;align-items:center;gap:4px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:2px 8px;cursor:pointer}
+.search-box:hover{border-color:var(--accent-blue)}
+.search-box span{font-size:10px;color:var(--text-muted)}
+.search-box kbd{font-size:8px;color:var(--text-muted);background:var(--bg-secondary);padding:1px 4px;border-radius:2px;font-family:var(--font-mono)}
+.icon-btn{width:26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);cursor:pointer;color:var(--text-muted);transition:all .15s;border:none;background:none;font-size:13px}
+.icon-btn:hover{background:var(--bg-card);color:var(--text-primary)}
+.avatar{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:600;cursor:pointer}
+
+/* === Panel cards === */
+.panel{background:var(--bg-card);border-bottom:1px solid var(--border-color);overflow:hidden}
+.panel-header{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;background:rgba(255,255,255,.02);border-bottom:1px solid var(--border-light)}
+.panel-title{display:flex;align-items:center;gap:4px;font-size:10px;font-weight:600;color:var(--text-bright);text-transform:uppercase;letter-spacing:.5px}
+.panel-title .icon{font-size:11px}
+.panel-tag{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;font-family:var(--font-mono)}
+.tag-critical{background:var(--red-bg);color:var(--accent-red)}
+.tag-high{background:var(--orange-bg);color:var(--accent-orange)}
+.tag-medium{background:var(--yellow-bg);color:var(--accent-yellow)}
+.tag-info{background:var(--blue-bg);color:var(--accent-blue)}
+.tag-opportunity{background:var(--green-bg);color:var(--accent-green)}
+.tag-ai{background:var(--purple-bg);color:var(--accent-purple)}
+.panel-body{padding:6px 10px}
+.panel-footer{padding:4px 10px;border-top:1px solid var(--border-light);font-size:9px;color:var(--text-muted);line-height:1.5;background:rgba(139,92,246,.04)}
+.panel-footer .ai-icon{color:var(--accent-purple);margin-right:2px}
+.panel-tabs{display:flex;gap:2px;padding:4px 10px 2px;overflow-x:auto}
+.ptab{font-size:9px;padding:2px 7px;border-radius:10px;cursor:pointer;color:var(--text-muted);background:none;border:1px solid transparent;transition:all .15s;white-space:nowrap}
+.ptab.active{background:var(--blue-bg);border-color:rgba(59,130,246,.3);color:var(--accent-blue)}
+.ptab:hover:not(.active){color:var(--text-secondary)}
+
+/* === Reusable === */
+.sparkline{display:inline-block;vertical-align:middle}
+.sparkline-bar{display:inline-block;width:2px;margin-right:1px;border-radius:1px;vertical-align:bottom}
+.score-cell{font-family:var(--font-mono);font-weight:700;font-size:11px}
+.score-green{color:var(--accent-green)}.score-blue{color:var(--accent-blue)}.score-yellow{color:var(--accent-yellow)}
+.score-orange{color:var(--accent-orange)}.score-red{color:var(--accent-red)}
+.mini-bar{height:4px;border-radius:2px;background:rgba(255,255,255,.06);overflow:hidden}
+.mini-bar-fill{height:100%;border-radius:2px;transition:width .6s ease}
+.trend-up{color:var(--accent-green)}.trend-down{color:var(--accent-red)}.trend-flat{color:var(--text-muted)}
+.row-item{display:flex;align-items:center;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.03);gap:4px;cursor:pointer;transition:background .15s}
+.row-item:hover{background:rgba(255,255,255,.02)}.row-item:last-child{border-bottom:none}
+.signal-row{padding:1px 0 1px 14px;font-size:9px;color:var(--text-muted);display:flex;align-items:center;gap:3px}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:4px}
+.metric-card{background:rgba(255,255,255,.03);border:1px solid var(--border-light);border-radius:var(--radius-md);padding:5px 6px}
+.metric-card .mc-label{font-size:7px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px}
+.metric-card .mc-value{font-size:14px;font-weight:700;font-family:var(--font-mono);color:var(--text-bright)}
+.metric-card .mc-sub{font-size:8px;color:var(--text-muted)}
+.feed-item{padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)}.feed-item:last-child{border-bottom:none}
+.feed-top{display:flex;align-items:center;gap:4px;margin-bottom:2px}
+.feed-time{font-size:8px;color:var(--text-muted);font-family:var(--font-mono)}
+.feed-source{font-size:8px;color:var(--text-muted);padding:0 3px;background:rgba(255,255,255,.05);border-radius:2px}
+.feed-title{font-size:10px;color:var(--text-primary);line-height:1.4}
+.feed-meta{font-size:9px;color:var(--text-muted);line-height:1.3}
+.funnel-row{display:flex;align-items:center;gap:4px;padding:2px 0;border-bottom:1px solid rgba(255,255,255,.03)}.funnel-row:last-child{border-bottom:none}
+.funnel-stage{width:46px;font-size:9px;color:var(--text-secondary);flex-shrink:0}
+.funnel-count{width:22px;text-align:right;font-family:var(--font-mono);font-size:10px;color:var(--text-primary);flex-shrink:0}
+.funnel-bar-track{flex:1;height:10px;background:rgba(255,255,255,.04);border-radius:3px;overflow:hidden}
+.funnel-bar-fill{height:100%;border-radius:3px;transition:width .6s}
+.res-row{display:flex;align-items:center;gap:5px;padding:2px 0}
+.res-name{width:50px;font-size:9px;color:var(--text-secondary);flex-shrink:0}
+.res-bar-track{flex:1;height:6px;background:rgba(255,255,255,.04);border-radius:3px;overflow:hidden}
+.res-bar-fill{height:100%;border-radius:3px;transition:width .6s}
+.res-pct{width:28px;text-align:right;font-family:var(--font-mono);font-size:9px;flex-shrink:0;font-weight:600}
+.rev-row{display:flex;align-items:center;gap:5px;padding:3px 0}
+.rev-label{width:44px;font-size:9px;color:var(--text-secondary);flex-shrink:0}
+.rev-bar-track{flex:1;height:5px;background:rgba(255,255,255,.04);border-radius:3px;overflow:hidden}
+.rev-bar-fill{height:100%;border-radius:3px}
+.rev-amount{width:58px;text-align:right;font-family:var(--font-mono);font-size:9px;color:var(--text-primary);flex-shrink:0}
+.rev-pct{width:34px;text-align:right;font-family:var(--font-mono);font-size:9px;flex-shrink:0}
+.pred-row{display:flex;align-items:center;gap:5px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.03)}.pred-row:last-child{border-bottom:none}
+.pred-name{flex:1;font-size:9px;color:var(--text-primary);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pred-bar-track{width:60px;height:4px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;flex-shrink:0}
+.pred-bar-fill{height:100%;border-radius:3px}
+.pred-pct{width:26px;text-align:right;font-family:var(--font-mono);font-size:9px;font-weight:600;flex-shrink:0}
+.dep-node{display:inline-flex;align-items:center;gap:3px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:2px 5px;font-size:9px;margin:2px;cursor:pointer;transition:all .15s}
+.dep-node:hover{border-color:var(--accent-blue);background:var(--bg-card-hover)}
+.compete-row{display:flex;align-items:center;gap:4px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.03)}.compete-row:last-child{border-bottom:none}
+
+/* EHI gauge (like WM's score circle) */
+.ehi-gauge{width:80px;height:80px;position:relative;flex-shrink:0}
+.ehi-gauge svg{width:100%;height:100%}
+.ehi-gauge .gauge-val{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.ehi-gauge .gauge-num{font-size:22px;font-weight:700;font-family:var(--font-mono);line-height:1}
+.ehi-gauge .gauge-label{font-size:7px;color:var(--text-muted);text-transform:uppercase}
+
+/* AI Chat FAB */
+.ai-chat-fab{position:fixed;bottom:14px;right:14px;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent-purple),var(--accent-blue));color:#fff;border:none;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(139,92,246,.4);z-index:200;transition:transform .2s}
+.ai-chat-fab:hover{transform:scale(1.1)}
+
+/* AI Brief KPI */
+.ai-kpi-row{display:flex;gap:4px;flex-wrap:wrap}
+.ai-kpi{background:rgba(255,255,255,.03);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:3px 6px}
+.ai-kpi .k-label{font-size:7px;color:var(--text-muted);text-transform:uppercase}
+.ai-kpi .k-value{font-size:12px;font-weight:700;font-family:var(--font-mono)}
+.ai-kpi .k-sub{font-size:8px}
+
+/* Bottom bar */
+.bottombar{height:24px;background:var(--bg-secondary);border-top:1px solid var(--border-color);display:flex;align-items:center;padding:0 10px;gap:10px;font-size:9px;color:var(--text-muted);flex-shrink:0}
+.bottombar a{color:var(--text-muted);text-decoration:none}.bottombar a:hover{color:var(--accent-blue)}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1200px){.col-left{flex:0 0 55%;max-width:55%}}
+@media(max-width:900px){.col-left{flex:0 0 100%;max-width:100%}.col-right{display:none}.left-icons{display:none}}
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+<script>
+// ========== DATA ==========
+const DATA = {
+  ehi:{score:74,trend:'+2'},
+  alerts:{critical:3,high:7},
+  revenue:{current:2400,target:3200,pct:75},
+  tabs:['经营','交付','财务','人力','外部'],
+  tabDimMap:{'经营':'biz','���付':'delivery','财务':'finance','人力':'people','外部':'external'},
+  customers:[
+    {name:'某央企总部',chi:91,r:95,e:88,d:90,o:92,trend:'up',amount:2100,rate:95,spark:[6,7,7,8,8,8,9,9,9,9],signals:[]},
+    {name:'某国有银行',chi:82,r:90,e:75,d:88,o:70,trend:'up',amount:1450,rate:85,spark:[5,6,6,7,7,7,8,8,8,8],signals:[]},
+    {name:'某省政务云',chi:72,r:70,e:80,d:65,o:75,trend:'flat',amount:1240,rate:78,spark:[6,6,6,7,6,7,7,7,7,7],signals:[{tag:'OPPORTUNITY',text:'国务院数字政府新政利好'}]},
+    {name:'某电力集团',chi:58,r:65,e:50,d:55,o:60,trend:'flat',amount:860,rate:63,spark:[5,5,5,4,4,5,5,5,5,5],signals:[]},
+    {name:'某省交通集团',chi:31,r:25,e:40,d:30,o:28,trend:'down',amount:520,rate:25,spark:[8,7,7,6,5,5,4,3,3,3],signals:[{tag:'ALERT',text:'母公司财报亏损'},{tag:'CRITICAL',text:'2笔回款超期60天'}]},
+    {name:'某市公安平台',chi:23,r:18,e:35,d:20,o:19,trend:'down',amount:340,rate:18,spark:[7,7,6,5,4,3,3,2,2,2],signals:[{tag:'CRITICAL',text:'客户被列为被执行人'},{tag:'ALERT',text:'项目逾期23天'}]},
+  ],
+  projects:[
+    {name:'某央企知识平台',phi:91,remain:62,status:'healthy',bar:90},
+    {name:'广州地铁督办平台',phi:88,remain:45,status:'healthy',bar:85},
+    {name:'某银行风控平台',phi:84,remain:38,status:'healthy',bar:80},
+    {name:'新华社协作平台',phi:72,remain:28,status:'normal',bar:68,sig:'工期偏紧'},
+    {name:'某电力运维平台',phi:65,remain:21,status:'normal',bar:58},
+    {name:'某省政务云二期',phi:54,remain:12,status:'warn',bar:45,sig:'客户变更'},
+    {name:'某市公安数据台',phi:38,remain:-3,status:'danger',bar:30,sig:'多信号收敛'},
+  ],
+  funnel:[
+    {stage:'线索',count:147,amount:8400,pct:100,signal:'🔥+23%',color:'var(--accent-blue)'},
+    {stage:'初步接触',count:89,amount:5200,pct:62,signal:'',color:'var(--accent-blue)'},
+    {stage:'需求确认',count:42,amount:3100,pct:37,signal:'❄12停滞',color:'var(--accent-yellow)'},
+    {stage:'方案提交',count:28,amount:2400,pct:29,signal:'',color:'var(--accent-blue)'},
+    {stage:'商务谈判',count:15,amount:1800,pct:21,signal:'⚠3超期',color:'var(--accent-orange)'},
+    {stage:'合同签署',count:8,amount:960,pct:11,signal:'',color:'var(--accent-green)'},
+  ],
+  news:[
+    {level:'CRITICAL',time:'3min',source:'CLIENT',title:'天眼查：某市公安局信息中心被列为被执行人',meta:'关联：1客户(¥340万未回款)',action:'AI评估：回款风险CRITICAL'},
+    {level:'HIGH',time:'15min',source:'COMPETE',title:'某头部竞对宣布政务云产品降价20%',meta:'关联：在谈商机12个',action:'AI评估：需评估报价策略'},
+    {level:'OPPORTUNITY',time:'32min',source:'POLICY',title:'国务院：加快推进数字政府建设指导意见',meta:'关联：17家政府客户·5商机',action:'AI评估：中期利好'},
+    {level:'INFO',time:'1h',source:'MACRO',title:'国家统计局：3月PMI为50.8，超预期',meta:'',action:'AI评估：政府客户预算执行意愿增强'},
+  ],
+  resources:[
+    {name:'Java高级',pct:92,color:'var(--accent-red)',tag:'瓶颈'},
+    {name:'产品经理',pct:82,color:'var(--accent-yellow)'},
+    {name:'前端开发',pct:71,color:'var(--accent-blue)'},
+    {name:'测试工程师',pct:62,color:'var(--accent-blue)'},
+    {name:'售前顾问',pct:48,color:'var(--accent-green)'},
+  ],
+  predictions:[
+    {name:'4月收入达标',pct:87,color:'var(--accent-green)',trend:'↑3%'},
+    {name:'Q2收入达标',pct:72,color:'var(--accent-blue)',trend:'—'},
+    {name:'全年目标',pct:65,color:'var(--accent-yellow)',trend:'↓2%'},
+    {name:'某省数字政府(¥800万)',pct:92,color:'var(--accent-green)',trend:'CLOSING'},
+    {name:'某银行二期(¥450万)',pct:85,color:'var(--accent-green)',trend:'利好'},
+    {name:'某市公安逾期加剧',pct:95,color:'var(--accent-red)',trend:'CRITICAL'},
+    {name:'某技术骨干离职',pct:78,color:'var(--accent-orange)',trend:'HIGH'},
+  ],
+  competitors:[
+    {name:'竞对A(云厂商)',signals:5,level:'HIGH',latest:'产品降价20%'},
+    {name:'竞对B(协同办公)',signals:2,level:'MEDIUM',latest:'发布AI助手'},
+    {name:'竞对C(低代码)',signals:3,level:'MEDIUM',latest:'B轮¥2亿'},
+    {name:'竞对D(政务云)',signals:1,level:'LOW',latest:'新版本发布'},
+  ],
+  policies:[
+    {source:'国务院',time:'今日',title:'加快推进数字政府建设指导意见',relevance:92,impact:'利好',linked:'17客户·5商机'},
+    {source:'工信部',time:'昨日',title:'信息化发展十四五中期评估通知',relevance:78,impact:'中性',linked:'8客户'},
+    {source:'广东省',time:'3天前',title:'数字经济促进条例修订征求意见稿',relevance:85,impact:'利好',linked:'11客户'},
+    {source:'招投标',time:'今日',title:'某省公安厅数字化专项采购(¥2,200万)',relevance:95,impact:'机遇',linked:'已推送VP'},
+  ],
+  layers:[
+    {name:'客户分布',checked:true,color:'var(--accent-blue)'},
+    {name:'项目交付地',checked:true,color:'var(--accent-green)'},
+    {name:'风险热区',checked:true,color:'var(--accent-red)'},
+    {name:'招投标热点',checked:false,color:'var(--accent-yellow)'},
+    {name:'人员分布',checked:false,color:'var(--accent-cyan)'},
+    {name:'竞对足迹',checked:false,color:'var(--accent-orange)'},
+  ],
+  dimensions:[
+    {id:'biz',name:'经营总览',icon:'📊'},
+    {id:'delivery',name:'项目交付',icon:'🚀'},
+    {id:'finance',name:'财务分析',icon:'💰'},
+    {id:'people',name:'人力资源',icon:'👥'},
+    {id:'external',name:'外部情报',icon:'🌐'},
+  ],
+  mapCities:[
+    {name:'北京',x:65,y:22,val:3200,count:8,chi:85},
+    {name:'上海',x:72,y:42,val:4100,count:12,chi:78},
+    {name:'广州',x:62,y:60,val:5600,count:15,chi:72},
+    {name:'深圳',x:64,y:62,val:2800,count:6,chi:80},
+    {name:'武汉',x:60,y:42,val:1200,count:4,chi:65},
+    {name:'成都',x:48,y:44,val:980,count:3,chi:60},
+    {name:'南京',x:68,y:38,val:650,count:2,chi:31},
+    {name:'天津',x:66,y:24,val:480,count:2,chi:75},
+    {name:'杭州',x:70,y:40,val:1100,count:3,chi:82},
+    {name:'昆明',x:44,y:54,val:360,count:1,chi:55},
+    {name:'西安',x:54,y:34,val:520,count:2,chi:58},
+    {name:'重庆',x:52,y:46,val:760,count:3,chi:62},
+  ],
+  depNodes:[
+    {type:'supplier',name:'阿里云',projects:12,risk:68},
+    {type:'supplier',name:'华为云',projects:3,risk:35},
+    {type:'supplier',name:'外包A',projects:2,risk:52},
+    {type:'customer',name:'某央企',pctRevenue:22,risk:45},
+  ],
+};
+
+// ========== UTILS ==========
+function scoreColor(s){return s>=80?'score-green':s>=60?'score-blue':s>=40?'score-yellow':s>=20?'score-orange':'score-red'}
+function scoreDot(s){return s>=80?'var(--accent-green)':s>=60?'var(--accent-blue)':s>=40?'var(--accent-yellow)':s>=20?'var(--accent-orange)':'var(--accent-red)'}
+function dimColor(v){if(v>=80)return`background:${scoreDot(v)};color:#fff`;if(v>=60)return'background:rgba(59,130,246,.2);color:var(--accent-blue)';if(v>=40)return'background:rgba(245,158,11,.2);color:var(--accent-yellow)';return'background:rgba(239,68,68,.2);color:var(--accent-red)'}
+function trendIcon(t){return t==='up'?'<span class="trend-up">▲</span>':t==='down'?'<span class="trend-down">▼</span>':'<span class="trend-flat">─</span>'}
+function levelClass(l){return{CRITICAL:'tag-critical',HIGH:'tag-high',MEDIUM:'tag-medium',INFO:'tag-info',OPPORTUNITY:'tag-opportunity',ALERT:'tag-high',LOW:'tag-info'}[l]||'tag-info'}
+function sparkHTML(data,h=10){const mx=Math.max(...data);return`<span class="sparkline" style="height:${h}px">${data.map(v=>{const bh=Math.max(2,(v/mx)*h);const c=v>=mx*.7?'var(--accent-green)':v>=mx*.4?'var(--accent-blue)':'var(--accent-red)';return`<span class="sparkline-bar" style="height:${bh}px;background:${c}"></span>`}).join('')}</span>`}
+function barColor(p){return p>=80?'var(--accent-green)':p>=60?'var(--accent-blue)':p>=40?'var(--accent-yellow)':'var(--accent-red)'}
+function statusDot(s){return{healthy:'var(--accent-green)',normal:'var(--accent-blue)',warn:'var(--accent-yellow)',danger:'var(--accent-red)'}[s]||'var(--text-muted)'}
+
+let currentDim='biz';
+
+// ========== TOPBAR ==========
+function renderTopbar(){
+  return`<div class="topbar">
+    <span class="logo">BingoEagle<span class="logo-sub">MONITOR</span></span>
+    <div class="top-sep"></div>
+    <div class="ehi-badge"><div><div class="label">EHI</div><div class="score">${DATA.ehi.score}</div></div><span style="font-size:9px;color:var(--accent-green)">▲${DATA.ehi.trend}</span></div>
+    <div class="alert-pills"><span class="alert-pill tag-critical">🔴${DATA.alerts.critical} CRITICAL</span><span class="alert-pill tag-high">🟠${DATA.alerts.high} HIGH</span></div>
+    <div class="top-sep"></div>
+    <div class="nav-tabs" id="top-tabs">${DATA.tabs.map((t,i)=>`<button class="nav-tab${i===0?' active':''}" data-dim="${DATA.tabDimMap[t]}" onclick="switchDim(this.dataset.dim)">${t}</button>`).join('')}</div>
+    <div class="top-spacer"></div>
+    <div class="live-dot"></div><span class="live-label">LIVE</span><span style="font-size:9px;color:var(--text-muted)" id="live-time">--:--:--</span>
+    <div class="top-sep"></div>
+    <div class="search-box" onclick="showSearch()"><span>🔍 搜索...</span><kbd>⌘K</kbd></div>
+    <button class="icon-btn">⚙</button><button class="icon-btn">🔔</button><div class="avatar">Y</div>
+  </div>`}
+
+// ========== LEFT ICON SIDEBAR (like WM) ==========
+function renderLeftIcons(){
+  const dims=DATA.dimensions;
+  return`<div class="left-icons">
+    ${dims.map(d=>`<button class="li-btn${d.id===currentDim?' active':''}" title="${d.name}" data-dim="${d.id}" onclick="switchDim('${d.id}')"><span>${d.icon}</span></button>`).join('')}
+    <div class="li-sep"></div>
+    ${DATA.layers.map(l=>`<button class="li-btn layer-btn" title="${l.name}" data-layer="${l.name}" onclick="toggleLayer(this,'${l.name}')" style="font-size:11px;${l.checked?'color:'+l.color:''}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;border:1.5px solid ${l.color};${l.checked?'background:'+l.color:''}"></span></button>`).join('')}
+    <div class="li-sep"></div>
+    <button class="li-btn" title="收入报表" onclick="switchDim('finance')" style="font-size:11px">📊</button>
+    <button class="li-btn" title="逾期项目" onclick="switchDim('delivery')" style="font-size:11px;position:relative">📋<span class="badge" style="background:var(--red-bg);color:var(--accent-red)">1</span></button>
+    <button class="li-btn" title="风险客户" onclick="switchDim('biz')" style="font-size:11px;position:relative">⚠️<span class="badge" style="background:var(--orange-bg);color:var(--accent-orange)">2</span></button>
+    <button class="li-btn" title="政策机遇" onclick="switchDim('external')" style="font-size:11px;position:relative">📢<span class="badge" style="background:var(--green-bg);color:var(--accent-green)">3</span></button>
+  </div>`}
+
+// ========== MAP (proper full China outline) ==========
+function renderMap(){
+  const c=DATA.mapCities;
+  // Full China outline path (simplified but recognizable)
+  const chinaPath='M44,8 L48,6 L52,5 L56,6 L60,5 L64,7 L68,6 L72,8 L76,10 L78,14 L76,18 L74,20 L76,24 L78,28 L76,30 L74,28 L72,26 L70,28 L72,30 L74,34 L76,38 L78,42 L76,44 L74,42 L72,44 L74,48 L76,52 L78,54 L76,56 L74,58 L72,60 L70,62 L68,64 L66,66 L64,68 L62,66 L60,68 L58,66 L56,64 L54,66 L52,64 L50,62 L48,64 L46,62 L44,60 L42,58 L40,56 L38,58 L36,56 L34,54 L32,52 L30,50 L28,48 L30,44 L28,40 L30,36 L28,32 L30,28 L32,24 L34,22 L36,20 L38,18 L36,14 L38,12 L40,10 L42,8Z';
+  // Provincial boundaries (simplified)
+  const provinces='M54,34 L58,32 L62,34 L64,38 M48,44 L52,42 L56,44 M60,42 L64,44 L66,48 M56,50 L60,52 L62,56 M44,48 L48,50 L50,54 M52,34 L48,36 L46,40 M66,30 L70,32 L72,36 M36,40 L40,42 L44,44';
+
+  return`<div class="map-area">
+    <div class="map-controls">
+      <span class="map-ctrl-btn active">2D</span>
+      <span class="map-ctrl-btn">3D</span>
+      <span class="map-ctrl-btn" style="margin-left:8px;font-size:9px">图层 ▾</span>
+    </div>
+    <svg viewBox="0 0 100 76" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%">
+      <defs>
+        <radialGradient id="glow-g"><stop offset="0%" stop-color="rgba(16,185,129,.3)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="glow-b"><stop offset="0%" stop-color="rgba(59,130,246,.3)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="glow-y"><stop offset="0%" stop-color="rgba(245,158,11,.3)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <radialGradient id="glow-r"><stop offset="0%" stop-color="rgba(239,68,68,.3)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+        <pattern id="mapgrid" width="5" height="5" patternUnits="userSpaceOnUse">
+          <line x1="5" y1="0" x2="5" y2="5" stroke="rgba(42,49,72,.2)" stroke-width=".06"/>
+          <line x1="0" y1="5" x2="5" y2="5" stroke="rgba(42,49,72,.2)" stroke-width=".06"/>
+        </pattern>
+      </defs>
+      <rect width="100" height="76" fill="var(--bg-primary)"/>
+      <rect width="100" height="76" fill="url(#mapgrid)"/>
+      <!-- China outline -->
+      <path d="${chinaPath}" fill="rgba(42,49,72,.15)" stroke="rgba(100,116,159,.4)" stroke-width=".3" stroke-linejoin="round"/>
+      <!-- Provincial lines -->
+      <path d="${provinces}" fill="none" stroke="rgba(42,49,72,.25)" stroke-width=".15"/>
+      <!-- Risk hotzone -->
+      <ellipse cx="67" cy="38" rx="6" ry="5" fill="rgba(239,68,68,.04)" stroke="rgba(239,68,68,.1)" stroke-width=".15" stroke-dasharray=".5,.5"/>
+      <text x="67" y="44" text-anchor="middle" font-size="1.6" fill="rgba(239,68,68,.4)">风险热区</text>
+      <!-- City bubbles -->
+      ${c.map(p=>{
+        const dot=scoreDot(p.chi);
+        const gid=p.chi>=80?'glow-g':p.chi>=60?'glow-b':p.chi>=40?'glow-y':'glow-r';
+        const r=Math.max(1,Math.sqrt(p.val/800));
+        return`<g class="map-city" style="cursor:pointer">
+          <circle cx="${p.x}" cy="${p.y}" r="${r*2.5}" fill="url(#${gid})"/>
+          <circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${dot}" opacity=".8">
+            <animate attributeName="r" values="${r};${r*1.12};${r}" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          <text x="${p.x}" y="${p.y-r-1.2}" text-anchor="middle" font-size="2.2" fill="var(--text-secondary)" font-weight="500">${p.name}</text>
+          <text x="${p.x}" y="${p.y+r+2.5}" text-anchor="middle" font-size="1.6" fill="var(--text-muted)" font-family="var(--font-mono)">¥${p.val}万·${p.count}客户</text>
+        </g>`}).join('')}
+    </svg>
+    <div class="map-legend">
+      <span style="color:var(--accent-green)">● 健康</span>
+      <span style="color:var(--accent-blue)">● 正常</span>
+      <span style="color:var(--accent-yellow)">● 关注</span>
+      <span style="color:var(--accent-red)">● 危险</span>
+      <span style="color:var(--text-muted);margin-left:6px">气泡=合同额</span>
+    </div>
+  </div>`}
+
+// ========== LEFT COLUMN PANELS (below map) ==========
+
+// AI Brief (like WM's "AI洞察" - world brief)
+function renderAIBrief(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">🧠</span>AI 经营态势 BRIEF</div><span class="panel-tag tag-ai">AI LIVE</span></div>
+    <div class="panel-body">
+      <div class="ai-kpi-row" style="margin-bottom:6px">
+        <div class="ai-kpi"><div class="k-label">本月收入</div><div class="k-value" style="color:var(--accent-cyan)">¥2,400万</div><div class="k-sub" style="color:var(--accent-green)">达成75%</div></div>
+        <div class="ai-kpi"><div class="k-label">在建项目</div><div class="k-value" style="color:var(--accent-blue)">23</div><div class="k-sub"><span style="color:var(--accent-green)">18</span>/<span style="color:var(--accent-yellow)">4</span>/<span style="color:var(--accent-red)">1</span></div></div>
+        <div class="ai-kpi"><div class="k-label">AI信号</div><div class="k-value" style="color:var(--accent-purple)">16</div><div class="k-sub"><span style="color:var(--accent-red)">3</span>·<span style="color:var(--accent-orange)">7</span>·<span style="color:var(--text-muted)">6</span></div></div>
+      </div>
+      <div style="margin-bottom:4px"><span style="font-size:8px;font-weight:600;color:var(--accent-green)">🟢 利好</span><span style="font-size:10px;color:var(--text-secondary);margin-left:4px">某央企验收<strong style="color:var(--text-primary)">¥680万</strong>，政务云获政策利好。月底预计¥3,050万（95%达成），置信82%。</span></div>
+      <div style="margin-bottom:4px"><span style="font-size:8px;font-weight:600;color:var(--accent-red)">🔴 关注</span><span style="font-size:10px;color:var(--text-secondary);margin-left:4px">某市公安<strong style="color:var(--text-primary)">多信号收敛87分</strong>——被执行人+逾期23天+PM离职。建议24h内止损。</span></div>
+      <div><span style="font-size:8px;font-weight:600;color:var(--accent-yellow)">🟡 提示</span><span style="font-size:10px;color:var(--text-secondary);margin-left:4px">回款率63%降3%，3笔逾期¥740万。竞对A降价20%，12商机受压。</span></div>
+    </div>
+  </div>`}
+
+// AI Forecasts (like WM's "AI Forecasts" section)
+function renderForecasts(){
+  const p=DATA.predictions;
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">🔮</span>AI 预测预报</div><span class="panel-tag tag-ai">MODEL</span></div>
+    <div class="panel-tabs"><button class="ptab active">收入</button><button class="ptab">商机</button><button class="ptab">风险</button></div>
+    <div class="panel-body">
+      ${p.slice(0,3).map(x=>`<div class="pred-row"><div class="pred-name">${x.name}</div><div class="pred-bar-track"><div class="pred-bar-fill" style="width:${x.pct}%;background:${x.color}"></div></div><div class="pred-pct" style="color:${x.color}">${x.pct}%</div><span style="font-size:8px;color:var(--text-muted)">${x.trend}</span></div>`).join('')}
+      <div style="margin:4px 0 2px;font-size:8px;color:var(--text-muted);font-weight:600">🤝 商机TOP</div>
+      ${p.slice(3,5).map(x=>`<div class="pred-row"><div class="pred-name">${x.name}</div><div class="pred-bar-track"><div class="pred-bar-fill" style="width:${x.pct}%;background:${x.color}"></div></div><div class="pred-pct" style="color:${x.color}">${x.pct}%</div></div>`).join('')}
+      <div style="margin:4px 0 2px;font-size:8px;color:var(--text-muted);font-weight:600">🚨 风险预测</div>
+      ${p.slice(5).map(x=>`<div class="pred-row"><div class="pred-name">${x.name}</div><div class="pred-bar-track"><div class="pred-bar-fill" style="width:${x.pct}%;background:${x.color}"></div></div><div class="pred-pct" style="color:${x.color}">${x.pct}%</div><span class="panel-tag ${x.trend==='CRITICAL'?'tag-critical':'tag-high'}" style="font-size:7px">${x.trend}</span></div>`).join('')}
+    </div>
+  </div>`}
+
+// External intel feed (like WM's live news)
+function renderIntelFeed(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">🌐</span>外部情报流</div><span style="font-size:9px;color:var(--accent-blue)">未读23</span></div>
+    <div class="panel-tabs"><button class="ptab active">全部</button><button class="ptab">政策</button><button class="ptab">竞对</button><button class="ptab">客户</button><button class="ptab">市场</button></div>
+    <div class="panel-body">
+      ${DATA.news.map(n=>`<div class="feed-item">
+        <div class="feed-top"><span class="panel-tag ${levelClass(n.level)}">${n.level}</span><span class="feed-source">${n.source}</span><span class="feed-time">${n.time}</span></div>
+        <div class="feed-title">${n.title}</div>
+        ${n.meta?`<div class="feed-meta">→ ${n.meta}</div>`:''}
+        <div class="feed-meta" style="color:var(--accent-purple)">→ ${n.action}</div>
+      </div>`).join('')}
+    </div>
+  </div>`}
+
+// Revenue pulse
+function renderRevenue(){
+  const rv=[{l:'已确认',a:'¥1,840万',p:57.5,c:'var(--accent-cyan)'},{l:'预计到账',a:'¥680万',p:21.3,c:'var(--accent-blue)'},{l:'管道加权',a:'¥350万',p:10.9,c:'rgba(59,130,246,.5)'}];
+  const ag=[{l:'30天内',a:'¥1,200万',p:58,c:'var(--accent-green)'},{l:'30-60天',a:'¥420万',p:20,c:'var(--accent-yellow)'},{l:'60-90天',a:'¥280万',p:14,c:'var(--accent-orange)'},{l:'90天+',a:'¥140万',p:7,c:'var(--accent-red)'}];
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">💰</span>收入脉搏</div><span style="font-size:9px;color:var(--text-muted)">目标¥3,200万</span></div>
+    <div class="panel-body">
+      <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:5px">
+        <span style="font-size:18px;font-weight:700;font-family:var(--font-mono);color:var(--accent-cyan)">¥2,400万</span>
+        <span style="font-size:9px;color:var(--accent-green)">↑12%</span>
+        <span style="font-size:8px;color:var(--text-muted)">AI预测:¥3,050万(95%)</span>
+      </div>
+      ${rv.map(r=>`<div class="rev-row"><div class="rev-label">${r.l}</div><div class="rev-bar-track"><div class="rev-bar-fill" style="width:${r.p/.6}%;background:${r.c}"></div></div><div class="rev-amount">${r.a}</div><div class="rev-pct" style="color:${r.c}">${r.p}%</div></div>`).join('')}
+      <div style="margin:5px 0 2px;font-size:8px;color:var(--text-muted);font-weight:600;text-transform:uppercase">账龄分布</div>
+      ${ag.map(a=>`<div class="rev-row"><div class="rev-label">${a.l}</div><div class="rev-bar-track"><div class="rev-bar-fill" style="width:${a.p*1.5}%;background:${a.c}"></div></div><div class="rev-amount">${a.a}</div><div class="rev-pct" style="color:${a.c}">${a.p}%</div></div>`).join('')}
+    </div>
+    <div class="panel-footer"><span class="ai-icon">🤖</span>某央企验收是最大增量。90天+¥140万建议法务催收。</div>
+  </div>`}
+
+// Funnel
+function renderFunnel(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">📈</span>商机漏斗</div><span style="font-size:9px;color:var(--text-muted)">管道¥8,400万</span></div>
+    <div class="panel-body">
+      ${DATA.funnel.map(f=>`<div class="funnel-row">
+        <div class="funnel-stage">${f.stage}</div><div class="funnel-count">${f.count}</div>
+        <div class="funnel-bar-track"><div class="funnel-bar-fill" style="width:${f.pct}%;background:${f.color}"></div></div>
+        <span style="width:48px;text-align:right;font-family:var(--font-mono);font-size:9px;color:var(--text-muted);flex-shrink:0">¥${f.amount}万</span>
+        ${f.signal?`<span style="font-size:8px;flex-shrink:0">${f.signal}</span>`:''}
+      </div>`).join('')}
+    </div>
+    <div class="panel-footer"><span class="ai-icon">🤖</span>线索+23%。需求确认12个停滞(7天+)，重点跟进。</div>
+  </div>`}
+
+// ========== RIGHT COLUMN PANELS ==========
+
+// EHI + Gauge (like WM's strategic situation + score circle)
+function renderEHI(){
+  const c=DATA.customers;
+  const s=DATA.ehi.score;
+  const gaugeColor=scoreDot(s);
+  const circumference=2*Math.PI*35;
+  const offset=circumference*(1-s/100);
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">🏥</span>企业健康指数 EHI</div></div>
+    <div style="display:flex;align-items:center;padding:8px 10px;gap:10px">
+      <div class="ehi-gauge">
+        <svg viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="35" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="4"/>
+          <circle cx="40" cy="40" r="35" fill="none" stroke="${gaugeColor}" stroke-width="4" stroke-linecap="round" stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" transform="rotate(-90 40 40)"/>
+        </svg>
+        <div class="gauge-val"><div class="gauge-num" style="color:${gaugeColor}">${s}</div><div class="gauge-label">EHI</div></div>
+      </div>
+      <div style="flex:1;display:flex;flex-wrap:wrap;gap:3px;font-size:9px">
+        <span style="color:var(--accent-green)">🟢健康108</span><span style="color:var(--accent-blue)">🔵正常26</span><span style="color:var(--accent-yellow)">🟡关注13</span><span style="color:var(--accent-orange)">🟠风险6</span><span style="color:var(--accent-red)">🔴危险2</span>
+      </div>
+    </div>
+    <div class="panel-tabs"><button class="ptab active" onclick="ehiTab(this,'chi')">客户CHI</button><button class="ptab" onclick="ehiTab(this,'phi')">项目PHI</button><button class="ptab" onclick="ehiTab(this,'dhi')">部门DHI</button></div>
+    <div class="panel-body" id="ehi-body">
+      ${c.map(x=>`<div class="row-item">
+        <span style="width:7px;height:7px;border-radius:50%;background:${scoreDot(x.chi)};flex-shrink:0"></span>
+        <span style="flex:1;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${x.name}</span>
+        <span class="score-cell ${scoreColor(x.chi)}" style="width:22px;text-align:right">${x.chi}</span>
+        <span style="width:56px;display:flex;gap:1px;flex-shrink:0">${[x.r,x.e,x.d,x.o].map(v=>`<span style="font-size:7px;font-family:var(--font-mono);padding:0 1px;border-radius:2px;${dimColor(v)}">${v}</span>`).join('')}</span>
+        <span style="width:36px;flex-shrink:0">${sparkHTML(x.spark,8)}</span>
+        <span style="width:44px;text-align:right;font-family:var(--font-mono);font-size:9px">¥${x.amount}万</span>
+        <span style="width:10px;text-align:center">${trendIcon(x.trend)}</span>
+      </div>${x.signals.map(s=>`<div class="signal-row"><span class="panel-tag ${levelClass(s.tag)}" style="font-size:7px">${s.tag}</span>${s.text}</div>`).join('')}`).join('')}
+    </div>
+    <div class="panel-footer"><span class="ai-icon">🤖</span>CHI降幅：某市公安(-18)、某省交通(-11)。上升：某央企(+5)。</div>
+  </div>`}
+
+// Risk radar
+function renderRisk(){
+  const risks=DATA.customers.filter(c=>c.chi<60);
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">🎯</span>客户风险雷达</div><span class="panel-tag tag-critical">CRITICAL ${DATA.alerts.critical}</span></div>
+    <div class="panel-body">
+      ${risks.map(c=>`<div style="padding:4px 0;border-bottom:1px solid var(--border-light)">
+        <div style="display:flex;align-items:center;gap:4px;margin-bottom:2px">
+          <span style="width:6px;height:6px;border-radius:50%;background:${scoreDot(c.chi)}"></span>
+          <span style="font-size:10px;font-weight:600">${c.name}</span>
+          <span class="score-cell ${scoreColor(c.chi)}" style="margin-left:auto">CHI ${c.chi}</span>${trendIcon(c.trend)}
+        </div>
+        <div style="display:flex;gap:5px;font-size:9px;color:var(--text-muted)">
+          <span>¥${c.amount}���</span><span style="color:${barColor(c.rate)}">回款${c.rate}%</span>${sparkHTML(c.spark,8)}
+        </div>
+        ${c.signals.map(s=>`<div style="display:flex;align-items:center;gap:3px;font-size:9px;padding:1px 0"><span class="panel-tag ${levelClass(s.tag)}" style="font-size:7px">${s.tag}</span><span style="color:var(--text-secondary)">${s.text}</span></div>`).join('')}
+      </div>`).join('')}
+    </div>
+    <div class="panel-footer"><span class="ai-icon">🤖</span>优先：某市公安多信号收敛87分。某省交通回款超60天需CFO介入。</div>
+  </div>`}
+
+// Projects
+function renderProjects(){
+  const p=DATA.projects;
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">🚀</span>项目交付态势</div><span style="font-size:9px;color:var(--text-muted)">共${p.length}个</span></div>
+    <div class="panel-body">
+      <div style="display:flex;gap:5px;margin-bottom:3px;font-size:9px">
+        <span style="color:var(--accent-green)">🟢3</span><span style="color:var(--accent-blue)">🔵2</span><span style="color:var(--accent-yellow)">🟡1</span><span style="color:var(--accent-red)">🔴1</span>
+      </div>
+      ${p.map(x=>`<div style="display:flex;align-items:center;gap:3px;padding:2px 0;border-bottom:1px solid rgba(255,255,255,.03)">
+        <span style="width:4px;height:4px;border-radius:50%;background:${statusDot(x.status)};flex-shrink:0"></span>
+        <span style="flex:1;font-size:9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${x.name}</span>
+        <span class="score-cell ${scoreColor(x.phi)}" style="width:20px;text-align:right;font-size:9px">${x.phi}</span>
+        <span style="width:36px;flex-shrink:0"><div class="mini-bar"><div class="mini-bar-fill" style="width:${x.bar}%;background:${statusDot(x.status)}"></div></div></span>
+        <span style="width:26px;text-align:right;font-size:8px;font-family:var(--font-mono);color:${x.remain<0?'var(--accent-red)':x.remain<15?'var(--accent-yellow)':'var(--text-muted)'}">${x.remain}天</span>
+        ${x.sig?`<span class="panel-tag ${x.status==='danger'?'tag-critical':'tag-high'}" style="font-size:6px">${x.sig}</span>`:''}
+      </div>`).join('')}
+    </div>
+    <div class="panel-footer"><span class="ai-icon">🤖</span>某市公安逾期3天+多信号收敛，建议紧急干预。</div>
+  </div>`}
+
+// HR pulse
+function renderHR(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">👤</span>人力脉搏</div><span style="font-size:9px;color:var(--text-muted)">486人</span></div>
+    <div class="panel-body">
+      <div class="metric-grid" style="margin-bottom:4px">
+        <div class="metric-card"><div class="mc-label">离职率</div><div class="mc-value">1.8%</div><div class="mc-sub" style="color:var(--accent-green)">行业2.5%</div></div>
+        <div class="metric-card"><div class="mc-label">到岗率</div><div class="mc-value" style="color:var(--accent-yellow)">72%</div><div class="mc-sub">目标85%</div></div>
+        <div class="metric-card"><div class="mc-label">人均产出</div><div class="mc-value">¥6.2万</div><div class="mc-sub" style="color:var(--accent-green)">↑8%</div></div>
+      </div>
+      <div style="font-size:8px;color:var(--text-muted);font-weight:600;margin-bottom:2px">资源池利用率</div>
+      ${DATA.resources.map(r=>`<div class="res-row"><div class="res-name">${r.name}</div><div class="res-bar-track"><div class="res-bar-fill" style="width:${r.pct}%;background:${r.color}"></div></div><div class="res-pct" style="color:${r.color}">${r.pct}%</div>${r.tag?`<span class="panel-tag tag-critical" style="font-size:6px">${r.tag}</span>`:''}</div>`).join('')}
+      <div style="margin-top:3px;font-size:9px">🌡 AI离职预警：<span style="color:var(--accent-red);font-weight:600">2人(HIGH)</span></div>
+    </div>
+  </div>`}
+
+// Competitors
+function renderCompetitors(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">⚔️</span>竞争情报</div></div>
+    <div class="panel-body">
+      ${DATA.competitors.map(c=>`<div class="compete-row">
+        <span style="flex:1;font-size:10px">${c.name}</span>
+        <span style="font-family:var(--font-mono);font-size:9px;color:${c.signals>=4?'var(--accent-red)':'var(--text-muted)'}">${c.signals}条</span>
+        <span class="panel-tag ${levelClass(c.level)}">${c.level}</span>
+        <span style="font-size:8px;color:var(--text-secondary);max-width:70px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${c.latest}</span>
+      </div>`).join('')}
+    </div>
+  </div>`}
+
+// Policies
+function renderPolicies(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">📜</span>政策监控</div></div>
+    <div class="panel-body">
+      ${DATA.policies.map(p=>{const ic=p.impact==='利好'?'var(--accent-green)':p.impact==='机遇'?'var(--accent-cyan)':'var(--text-muted)';return`<div class="feed-item">
+        <div class="feed-top"><span class="feed-source">${p.source}</span><span class="feed-time">${p.time}</span><span style="margin-left:auto;font-size:8px;font-family:var(--font-mono);color:${p.relevance>=90?'var(--accent-green)':'var(--accent-blue)'}">相关${p.relevance}%</span></div>
+        <div class="feed-title">${p.title}</div>
+        <div style="font-size:9px;color:var(--text-muted)">影响:<strong style="color:${ic}">${p.impact}</strong> → ${p.linked}</div>
+      </div>`}).join('')}
+    </div>
+  </div>`}
+
+// Dependencies
+function renderDeps(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">🔗</span>依赖链</div></div>
+    <div class="panel-body">
+      <div style="display:flex;flex-wrap:wrap;gap:2px;margin-bottom:4px">
+        ${DATA.depNodes.filter(n=>n.type==='supplier').map(n=>`<span class="dep-node" onclick="showCascade('${n.name}')">☁️${n.name} <span style="font-size:7px;color:var(--text-muted)">${n.projects}项</span></span>`).join('')}
+      </div>
+      ${DATA.depNodes.map(n=>`<div style="display:flex;align-items:center;justify-content:space-between;padding:2px 0;font-size:9px;border-bottom:1px solid rgba(255,255,255,.03)">
+        <span>${n.type==='supplier'?'☁️':'🏢'}${n.name}</span>
+        <span style="color:var(--text-muted)">${n.projects?n.projects+'项目':'收入'+n.pctRevenue+'%'}</span>
+        <span class="score-cell ${scoreColor(100-n.risk)}" style="font-size:8px">RISK:${n.risk}</span>
+      </div>`).join('')}
+    </div>
+  </div>`}
+
+// Profit analysis (for finance view)
+function renderProfit(){
+  return`<div class="panel">
+    <div class="panel-header"><div class="panel-title"><span class="icon">📊</span>利润分析</div></div>
+    <div class="panel-body">
+      <div class="metric-grid" style="margin-bottom:4px">
+        <div class="metric-card"><div class="mc-label">毛利率</div><div class="mc-value" style="color:var(--accent-green)">38%</div><div class="mc-sub" style="color:var(--accent-green)">↑2%</div></div>
+        <div class="metric-card"><div class="mc-label">现金流</div><div class="mc-value" style="color:var(--accent-cyan)">¥860万</div><div class="mc-sub">净流入</div></div>
+        <div class="metric-card"><div class="mc-label">应收账款</div><div class="mc-value" style="color:var(--accent-yellow)">¥2,040万</div><div class="mc-sub">DSO 68天</div></div>
+        <div class="metric-card"><div class="mc-label">费用率</div><div class="mc-value">22%</div><div class="mc-sub" style="color:var(--accent-green)">↓1.5%</div></div>
+      </div>
+      <div style="font-size:8px;color:var(--text-muted);font-weight:600;margin-bottom:2px">成本结构</div>
+      ${[{l:'人力成本',p:62,c:'var(--accent-blue)'},{l:'外包成本',p:18,c:'var(--accent-purple)'},{l:'云资源',p:12,c:'var(--accent-cyan)'},{l:'其他',p:8,c:'var(--text-muted)'}].map(r=>`<div class="res-row"><div class="res-name">${r.l}</div><div class="res-bar-track"><div class="res-bar-fill" style="width:${r.p}%;background:${r.c}"></div></div><div class="res-pct" style="color:${r.c}">${r.p}%</div></div>`).join('')}
+    </div>
+    <div class="panel-footer"><span class="ai-icon">🤖</span>毛利率+2%，某央企高毛利验收。人力62%偏高。</div>
+  </div>`}
+
+// ========== CONTENT ASSEMBLY (WM layout: left col = map + below, right col = stacked panels) ==========
+function renderLeftCol(){
+  switch(currentDim){
+    case 'biz': return renderAIBrief()+renderForecasts()+renderIntelFeed()+renderRevenue();
+    case 'delivery': return renderAIBrief()+renderForecasts()+renderRevenue();
+    case 'finance': return renderAIBrief()+renderRevenue()+renderProfit()+renderForecasts();
+    case 'people': return renderAIBrief()+renderForecasts()+renderIntelFeed();
+    case 'external': return renderIntelFeed()+renderPolicies()+renderAIBrief()+renderForecasts();
+    default: return '';
+  }
+}
+function renderRightCol(){
+  switch(currentDim){
+    case 'biz': return renderEHI()+renderRisk()+renderProjects()+renderFunnel()+renderHR()+renderCompetitors()+renderDeps();
+    case 'delivery': return renderProjects()+renderEHI()+renderRisk()+renderDeps()+renderHR();
+    case 'finance': return renderEHI()+renderFunnel()+renderRisk()+renderDeps()+renderCompetitors();
+    case 'people': return renderHR()+renderEHI()+renderProjects()+renderDeps()+renderRisk();
+    case 'external': return renderCompetitors()+renderEHI()+renderRisk()+renderForecasts()+renderFunnel();
+    default: return '';
+  }
+}
+
+// ========== DIMENSION SWITCHING ==========
+function switchDim(dimId){
+  currentDim=dimId;
+  // Update left icon sidebar
+  document.querySelectorAll('.left-icons .li-btn[data-dim]').forEach(el=>{el.classList.toggle('active',el.dataset.dim===dimId)});
+  // Update topbar tabs
+  document.querySelectorAll('#top-tabs .nav-tab').forEach(el=>{el.classList.toggle('active',el.dataset.dim===dimId)});
+  // Re-render content columns
+  document.getElementById('below-map').innerHTML=renderLeftCol();
+  document.getElementById('right-scroll').innerHTML=renderRightCol();
+}
+
+// ========== EHI TAB SWITCHING ==========
+function ehiTab(el,type){
+  el.parentElement.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
+  const body=document.getElementById('ehi-body');
+  if(type==='phi'){
+    body.innerHTML=DATA.projects.map(x=>`<div class="row-item"><span style="width:5px;height:5px;border-radius:50%;background:${statusDot(x.status)};flex-shrink:0"></span><span style="flex:1;font-size:9px">${x.name}</span><span class="score-cell ${scoreColor(x.phi)}" style="width:20px;text-align:right;font-size:9px">${x.phi}</span><span style="width:36px"><div class="mini-bar"><div class="mini-bar-fill" style="width:${x.bar}%;background:${statusDot(x.status)}"></div></div></span><span style="width:24px;text-align:right;font-size:8px;font-family:var(--font-mono);color:${x.remain<0?'var(--accent-red)':'var(--text-muted)'}">${x.remain}天</span>${x.sig?`<span class="panel-tag tag-high" style="font-size:6px">${x.sig}</span>`:''}</div>`).join('');
+  } else if(type==='dhi'){
+    body.innerHTML=[{n:'研发中心',s:81},{n:'交付部',s:74},{n:'销售部',s:72},{n:'产品部',s:68},{n:'人力资源',s:65}].map(d=>`<div class="row-item"><span style="width:6px;height:6px;border-radius:50%;background:${scoreDot(d.s)};flex-shrink:0"></span><span style="flex:1;font-size:9px">${d.n}</span><span class="score-cell ${scoreColor(d.s)}" style="width:22px;text-align:right;font-size:9px">${d.s}</span>${trendIcon(d.s>=75?'up':d.s>=65?'flat':'down')}</div>`).join('');
+  } else {
+    const c=DATA.customers;
+    body.innerHTML=c.map(x=>`<div class="row-item"><span style="width:7px;height:7px;border-radius:50%;background:${scoreDot(x.chi)};flex-shrink:0"></span><span style="flex:1;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${x.name}</span><span class="score-cell ${scoreColor(x.chi)}" style="width:22px;text-align:right">${x.chi}</span><span style="width:56px;display:flex;gap:1px;flex-shrink:0">${[x.r,x.e,x.d,x.o].map(v=>`<span style="font-size:7px;font-family:var(--font-mono);padding:0 1px;border-radius:2px;${dimColor(v)}">${v}</span>`).join('')}</span><span style="width:36px;flex-shrink:0">${sparkHTML(x.spark,8)}</span><span style="width:44px;text-align:right;font-family:var(--font-mono);font-size:9px">¥${x.amount}万</span><span style="width:10px;text-align:center">${trendIcon(x.trend)}</span></div>${x.signals.map(s=>`<div class="signal-row"><span class="panel-tag ${levelClass(s.tag)}" style="font-size:7px">${s.tag}</span>${s.text}</div>`).join('')}`).join('');
+  }
+}
+
+// ========== LAYER TOGGLE ==========
+function toggleLayer(btn,name){
+  const l=DATA.layers.find(x=>x.name===name);
+  if(l){l.checked=!l.checked;const dot=btn.querySelector('span');if(dot){dot.style.background=l.checked?l.color:'';btn.style.color=l.checked?l.color:'var(--text-muted)'}}
+}
+
+// ========== INTERACTIONS ==========
+function switchTime(el){el.parentElement.querySelectorAll('.time-btn').forEach(t=>t.classList.remove('active'));el.classList.add('active')}
+
+function showSearch(){
+  const m=document.createElement('div');m.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:1000;display:flex;justify-content:center;padding-top:15vh';
+  m.onclick=e=>{if(e.target===m)m.remove()};
+  m.innerHTML=`<div style="width:480px;max-height:340px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+    <div style="display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--border-light)"><span style="font-size:14px;color:var(--text-muted)">🔍</span><input type="text" placeholder="搜索客户、项目、员工..." autofocus style="flex:1;background:none;border:none;outline:none;color:var(--text-primary);font-size:13px"><kbd style="font-size:9px;color:var(--text-muted);background:var(--bg-secondary);padding:2px 5px;border-radius:3px">ESC</kbd></div>
+    <div style="padding:10px 14px"><div style="font-size:9px;color:var(--text-muted);margin-bottom:5px;text-transform:uppercase">AI 快捷查询</div><div style="display:flex;flex-wrap:wrap;gap:3px"><span class="panel-tag tag-ai" style="cursor:pointer;font-size:9px">本月回款风险最高的客户？</span><span class="panel-tag tag-ai" style="cursor:pointer;font-size:9px">最近有什么政策利好？</span><span class="panel-tag tag-ai" style="cursor:pointer;font-size:9px">Q2收入能达标吗？</span></div></div>
+  </div>`;document.body.appendChild(m);m.querySelector('input').focus()}
+
+function showCascade(name){
+  const m=document.createElement('div');m.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:1000;display:flex;justify-content:center;align-items:center';
+  m.onclick=e=>{if(e.target===m)m.remove()};
+  m.innerHTML=`<div style="width:400px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,.5)">
+    <div style="padding:8px 12px;border-bottom:1px solid var(--border-light);display:flex;justify-content:space-between"><span style="font-size:12px;font-weight:600">🔗 级联影响：${name}</span><span style="cursor:pointer;color:var(--text-muted)" onclick="this.closest('div[style*=position]').remove()">✕</span></div>
+    <div style="padding:12px">
+      <div style="display:flex;gap:5px;margin-bottom:8px">
+        <div class="metric-card" style="flex:1"><div class="mc-label">依赖项目</div><div class="mc-value" style="color:var(--accent-blue)">12</div></div>
+        <div class="metric-card" style="flex:1"><div class="mc-label">涉及客户</div><div class="mc-value" style="color:var(--accent-cyan)">9</div></div>
+        <div class="metric-card" style="flex:1"><div class="mc-label">合同额</div><div class="mc-value" style="color:var(--accent-yellow);font-size:12px">¥4,200万</div></div>
+        <div class="metric-card" style="flex:1"><div class="mc-label">风险</div><div class="mc-value" style="color:var(--accent-orange)">68</div></div>
+      </div>
+      <div style="font-size:10px;color:var(--text-secondary);line-height:1.6">🟢 4项目可迁移(冗余0.7)<br>🟡 5项目迁移成本高(冗余0.2)<br>🔴 3项目深度绑定(冗余0)</div>
+      <div style="margin-top:8px;padding:6px;background:var(--purple-bg);border-radius:var(--radius-md);font-size:10px;color:var(--text-secondary);line-height:1.4"><span style="color:var(--accent-purple)">🤖</span> 风险敞口¥1,800万。建议6月制定多云迁移计划。</div>
+    </div></div>`;document.body.appendChild(m)}
+
+function toggleAIChat(){
+  let c=document.getElementById('ai-chat-panel');if(c){c.remove();return}
+  c=document.createElement('div');c.id='ai-chat-panel';
+  c.style.cssText='position:fixed;bottom:62px;right:14px;width:340px;height:400px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);box-shadow:0 16px 48px rgba(0,0,0,.5);z-index:200;display:flex;flex-direction:column;overflow:hidden';
+  c.innerHTML=`<div style="padding:6px 10px;border-bottom:1px solid var(--border-light);display:flex;justify-content:space-between;background:rgba(139,92,246,.05)"><span style="font-size:12px;font-weight:600">🧠 AI 经营助手</span><span style="font-size:8px;color:var(--accent-green)">● 在线</span></div>
+    <div style="flex:1;overflow-y:auto;padding:8px" id="chat-body">
+      <div style="display:flex;gap:5px;margin-bottom:8px"><div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--accent-purple),var(--accent-blue));display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0">🧠</div>
+      <div style="background:var(--bg-secondary);border-radius:0 var(--radius-lg) var(--radius-lg) var(--radius-lg);padding:6px 8px;font-size:10px;color:var(--text-secondary);line-height:1.5;max-width:240px">你好！问我经营问题。试试：<span style="color:var(--accent-purple)">"回款风险最高？"</span></div></div>
+    </div>
+    <div style="padding:5px 8px;border-top:1px solid var(--border-light);display:flex;gap:3px"><input type="text" placeholder="问我经营问题..." style="flex:1;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:4px 6px;color:var(--text-primary);font-size:10px;outline:none" onkeydown="if(event.key==='Enter')aiSend(this)"><button style="background:var(--accent-purple);border:none;border-radius:var(--radius-md);padding:4px 8px;color:#fff;font-size:9px;cursor:pointer" onclick="aiSend(this.previousElementSibling)">发送</button></div>`;
+  document.body.appendChild(c)}
+
+function aiSend(input){
+  const q=input.value.trim();if(!q)return;
+  const cb=document.getElementById('chat-body');
+  cb.innerHTML+=`<div style="display:flex;gap:5px;margin:6px 0;justify-content:flex-end"><div style="background:var(--accent-blue);border-radius:var(--radius-lg) 0 var(--radius-lg) var(--radius-lg);padding:5px 8px;font-size:10px;color:#fff;max-width:200px">${q}</div></div>`;
+  input.value='';
+  setTimeout(()=>{
+    let a='正在分析...';
+    if(q.includes('回款')||q.includes('风险'))a='回款风险TOP3：<br>1.<strong style="color:var(--accent-red)">某市公安</strong> ¥340万逾期45天<br>2.<strong style="color:var(--accent-orange)">某省交通</strong> ¥280万超60天<br>3.<strong style="color:var(--accent-yellow)">某电力</strong> ¥120万逾期32天';
+    else if(q.includes('收入')||q.includes('Q2'))a='Q2预测<strong style="color:var(--accent-cyan)">¥9,200万</strong>(72%达成，置信68%)';
+    else if(q.includes('政策')||q.includes('利好'))a='近7天利好3条：<br>1.📢<strong>数字政府指导意见</strong>(92%)<br>2.📋<strong>广东数字经济条例</strong>(85%)<br>3.📋<strong>公安厅采购¥2,200万</strong>(95%)';
+    cb.innerHTML+=`<div style="display:flex;gap:5px;margin:6px 0"><div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--accent-purple),var(--accent-blue));display:flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0">🧠</div><div style="background:var(--bg-secondary);border-radius:0 var(--radius-lg) var(--radius-lg) var(--radius-lg);padding:6px 8px;font-size:10px;color:var(--text-secondary);line-height:1.4;max-width:240px">${a}</div></div>`;
+    cb.scrollTop=cb.scrollHeight},400)}
+
+// ========== KEYBOARD ==========
+document.addEventListener('keydown',e=>{
+  if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();showSearch()}
+  if(e.key==='Escape'){document.querySelectorAll('div[style*="position:fixed"][style*="z-index:1000"]').forEach(m=>m.remove());const c=document.getElementById('ai-chat-panel');if(c)c.remove()}
+});
+
+// ========== LIVE CLOCK ==========
+setInterval(()=>{const t=document.getElementById('live-time');if(t){const n=new Date();t.textContent=`${n.getHours().toString().padStart(2,'0')}:${n.getMinutes().toString().padStart(2,'0')}:${n.getSeconds().toString().padStart(2,'0')}`}},1000);
+
+// ========== INIT ==========
+function init(){
+  document.getElementById('app').innerHTML=
+    renderTopbar()+
+    `<div class="main-wrap">`+
+      renderLeftIcons()+
+      `<div class="content-body">`+
+        `<div class="col-left">`+
+          renderMap()+
+          `<div class="below-map" id="below-map">${renderLeftCol()}</div>`+
+        `</div>`+
+        `<div class="col-right"><div class="right-scroll" id="right-scroll">${renderRightCol()}</div></div>`+
+      `</div>`+
+    `</div>`+
+    `<div class="bottombar"><span>BingoEagle Monitor</span><span class="top-spacer"></span><a>Status</a><a>Docs</a><a>GitHub</a></div>`+
+    `<button class="ai-chat-fab" onclick="toggleAIChat()">🧠</button>`;
+}
+init();
+</script>
+</body>
+</html>
