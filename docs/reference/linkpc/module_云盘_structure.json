@@ -1,0 +1,383 @@
+{
+  "text": "预加载文本\n消息\n云盘\n云盘\n最近使用\n我的收藏\n部门文档\n团队文档\n个人文档\n企业文档\n共享协作\n回收站\n本地同步\n清空\n\n最近使用\n\n名称\n\t\n打开时间\n\t\n路径\n2026年Q2_业务需求跟踪表.xlsx\n\t\n2026-03-26 18:27\n\t\n共享协作\n\n\n三所全领域模型演示环境.txt\n\t\n2026-02-09 18:26\n\t\n共享协作\n\n\n通过全域智慧协作向AI-Native企业演进.docx\n\t\n2026-01-27 14:13\n\t\n共享协作\n\n\n三所_全领域模型发布会_0928.pptx\n\t\n2026-01-06 10:15\n\t\n共享协作\n\n\n全领域模型人员与账号方案说明-20251024.pdf\n\t\n2026-01-05 13:41\n\t\n共享协作\n\n\n人事域-党建管理.png\n\t\n2026-01-05 13:40\n\t\n共享协作\n\n\nWPS_Mac.zip\n\t\n2025-12-02 10:08\n\t\n共享协作\n\n\n售前顾问-刘书宏-成都大学.pdf\n\t\n2025-11-10 14:32\n\t\n共享协作\n\n\n需求分析师-田小燕-华中农业大学.pdf\n\t\n2025-11-10 14:32\n\t\n共享协作\n\n\n需求分析师-陈泓池-杭州电子科技大学硕士.pdf\n\t\n2025-11-10 14:32\n\t\n共享协作\n\n\n需求分析师-王浩-西安邮电大学.pdf\n\t\n2025-11-10 14:31\n\t\n共享协作\n\n\n中航国有资产大数据研究院项目-会议纪要-20251104.docx\n\t\n2025-11-10 07:36\n\t\n团队文档/中航国有资产研究院项目支持空间/2-会议纪要/2025-11-04\n\n\n需求分析师-黄晓鑫-新疆农业大学硕士.pdf\n\t\n2025-11-05 16:33\n\t\n共享协作\n\n\n需求分析师-陈易瑾-武汉理工大学.pdf\n\t\n2025-11-05 16:32\n\t\n共享协作\n\n\n需求分析师-何超哥-西南财经大学.pdf\n\t\n2025-11-05 16:32\n\t\n共享协作\n\n\n需求分析师+阮文炜+东华大学.pdf\n\t\n2025-11-05 16:32\n\t\n共享协作\n\n\n需求分析师+甄冬雪+西南石油大学硕士.png\n\t\n2025-11-05 16:32\n\t\n共享协作\n\n\n需求分析师+王杰+沈阳化工大学硕士.pdf\n\t\n2025-11-05 16:31\n\t\n共享协作\n\n\n需求分析师+刘烁+西南科技大学.pdf\n\t\n2025-11-05 16:30\n\t\n共享协作\n\n\n需求分析-言艳秋-桂林电子科技大学.pdf\n\t\n2025-11-05 16:30\n\t\n共享协作\n文件属性\n最近使用\n52项\n传输列表",
+  "items": [
+    {
+      "text": "预加载文本",
+      "x": -200,
+      "y": 0,
+      "cls": "ysbth",
+      "tag": "DIV"
+    },
+    {
+      "text": "消息",
+      "x": 654,
+      "y": 9,
+      "cls": "nav-text",
+      "tag": "SPAN"
+    },
+    {
+      "text": "云盘",
+      "x": 706,
+      "y": 9,
+      "cls": "nav-text",
+      "tag": "SPAN"
+    },
+    {
+      "text": "最近使用",
+      "x": 39,
+      "y": 98,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "我的收藏",
+      "x": 39,
+      "y": 138,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "部门文档",
+      "x": 39,
+      "y": 187,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "团队文档",
+      "x": 39,
+      "y": 227,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "个人文档",
+      "x": 39,
+      "y": 267,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "企业文档",
+      "x": 39,
+      "y": 307,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "共享协作",
+      "x": 39,
+      "y": 356,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "回收站",
+      "x": 39,
+      "y": 396,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "本地同步",
+      "x": 39,
+      "y": 436,
+      "cls": "document-item-collapse-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "清空",
+      "x": 187,
+      "y": 72,
+      "cls": "",
+      "tag": "SPAN"
+    },
+    {
+      "text": "名称",
+      "x": 209,
+      "y": 165,
+      "cls": "checkbox-text",
+      "tag": "SPAN"
+    },
+    {
+      "text": "打开时间",
+      "x": 695,
+      "y": 165,
+      "cls": "",
+      "tag": "SPAN"
+    },
+    {
+      "text": "路径",
+      "x": 958,
+      "y": 165,
+      "cls": "",
+      "tag": "SPAN"
+    },
+    {
+      "text": "2026年Q2_业务需求跟踪表.xlsx",
+      "x": 245,
+      "y": 211,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2026-03-26 18:27",
+      "x": 691,
+      "y": 210,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "三所全领域模型演示环境.txt",
+      "x": 245,
+      "y": 266,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2026-02-09 18:26",
+      "x": 691,
+      "y": 265,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "通过全域智慧协作向AI-Native企业演进.docx",
+      "x": 245,
+      "y": 321,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2026-01-27 14:13",
+      "x": 691,
+      "y": 320,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "三所_全领域模型发布会_0928.pptx",
+      "x": 245,
+      "y": 376,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2026-01-06 10:15",
+      "x": 691,
+      "y": 375,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "全领域模型人员与账号方案说明-20251024.pdf",
+      "x": 245,
+      "y": 431,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2026-01-05 13:41",
+      "x": 691,
+      "y": 430,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "人事域-党建管理.png",
+      "x": 245,
+      "y": 486,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2026-01-05 13:40",
+      "x": 691,
+      "y": 485,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "WPS_Mac.zip",
+      "x": 245,
+      "y": 541,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-12-02 10:08",
+      "x": 691,
+      "y": 540,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "售前顾问-刘书宏-成都大学.pdf",
+      "x": 245,
+      "y": 596,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-11-10 14:32",
+      "x": 691,
+      "y": 595,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "需求分析师-田小燕-华中农业大学.pdf",
+      "x": 245,
+      "y": 651,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "需求分析师-陈泓池-杭州电子科技大学硕士.pdf",
+      "x": 245,
+      "y": 706,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "需求分析师-王浩-西安邮电大学.pdf",
+      "x": 245,
+      "y": 761,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-11-10 14:31",
+      "x": 691,
+      "y": 760,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "中航国有资产大数据研究院项目-会议纪要-20251104.docx",
+      "x": 245,
+      "y": 816,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-11-10 07:36",
+      "x": 691,
+      "y": 815,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "团队文档/中航国有资产研究院项目支持空间/2-会议纪要/2025-11-04",
+      "x": 953,
+      "y": 815,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "需求分析师-黄晓鑫-新疆农业大学硕士.pdf",
+      "x": 245,
+      "y": 871,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-11-05 16:33",
+      "x": 691,
+      "y": 870,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "需求分析师-陈易瑾-武汉理工大学.pdf",
+      "x": 245,
+      "y": 926,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-11-05 16:32",
+      "x": 691,
+      "y": 925,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "需求分析师-何超哥-西南财经大学.pdf",
+      "x": 245,
+      "y": 981,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "需求分析师+阮文炜+东华大学.pdf",
+      "x": 245,
+      "y": 1036,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "需求分析师+甄冬雪+西南石油大学硕士.png",
+      "x": 245,
+      "y": 1091,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "需求分析师+王杰+沈阳化工大学硕士.pdf",
+      "x": 245,
+      "y": 1146,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-11-05 16:31",
+      "x": 691,
+      "y": 1145,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "需求分析师+刘烁+西南科技大学.pdf",
+      "x": 245,
+      "y": 1201,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "2025-11-05 16:30",
+      "x": 691,
+      "y": 1200,
+      "cls": "file-updater-row",
+      "tag": "SPAN"
+    },
+    {
+      "text": "需求分析-言艳秋-桂林电子科技大学.pdf",
+      "x": 245,
+      "y": 1256,
+      "cls": "document-item-collect-name",
+      "tag": "DIV"
+    },
+    {
+      "text": "文件属性",
+      "x": 1126,
+      "y": 154,
+      "cls": "document-window-title",
+      "tag": "DIV"
+    },
+    {
+      "text": "52项",
+      "x": 184,
+      "y": 882,
+      "cls": "document-items-detail",
+      "tag": "DIV"
+    },
+    {
+      "text": "传输列表",
+      "x": 1258,
+      "y": 881,
+      "cls": "",
+      "tag": "SPAN"
+    }
+  ]
+}

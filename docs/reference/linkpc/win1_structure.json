@@ -1,0 +1,195 @@
+{
+  "title": "项目管理系统",
+  "url": "https://projectcollaboration.bingosoft.net/xzyq-ui/index.html#/lowcode/chaoyuxiezuo.mySpace.daiban.todoView",
+  "text": "消息\n待办(99+)\n待办\n1\n待阅\n99+\n已办\n待办\n去安排\n筛选\n排序\n请审批人员考勤异常申请-2026年03月27日\n来自假勤系统\n2026-03-27 10:09",
+  "struct": {
+    "nav": [
+      "筛选",
+      "关键词",
+      "仅看pc",
+      "请选择",
+      "无匹配数据",
+      "是",
+      "否",
+      "加载中",
+      "开始时间",
+      "结束时间",
+      "所属公司",
+      "来源",
+      "清空筛选条件",
+      "取消",
+      "确定",
+      "按提交时间",
+      "按优先级",
+      "按来源系统"
+    ],
+    "tabs": [],
+    "buttons": [
+      "去安排",
+      "筛选",
+      "排序",
+      "取消",
+      "确定",
+      "新建任务"
+    ],
+    "panels": [],
+    "inputs": [
+      {
+        "type": "text",
+        "placeholder": "请输入",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "hidden",
+        "placeholder": "",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "text",
+        "placeholder": "请选择日期",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "text",
+        "placeholder": "请选择日期",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "hidden",
+        "placeholder": "",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "text",
+        "placeholder": "请选择",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "hidden",
+        "placeholder": "",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "text",
+        "placeholder": "请选择",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "text",
+        "placeholder": "请输入",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "headings": [],
+    "allItems": [
+      {
+        "text": "消息",
+        "tag": "DIV",
+        "x": 33,
+        "y": 23,
+        "w": 65,
+        "h": 46,
+        "cls": "le-flex-item"
+      },
+      {
+        "text": "待办(99+)",
+        "tag": "DIV",
+        "x": 115,
+        "y": 23,
+        "w": 100,
+        "h": 46,
+        "cls": "le-flex-item"
+      },
+      {
+        "text": "待办",
+        "tag": "DIV",
+        "x": 149,
+        "y": 82,
+        "w": 206,
+        "h": 22,
+        "cls": "le-flex-item le-flex-item-fill"
+      },
+      {
+        "text": "1",
+        "tag": "DIV",
+        "x": 262,
+        "y": 82,
+        "w": 19,
+        "h": 19,
+        "cls": "le-flex-item"
+      },
+      {
+        "text": "待阅",
+        "tag": "DIV",
+        "x": 146,
+        "y": 126,
+        "w": 195,
+        "h": 22,
+        "cls": "le-flex-item le-flex-item-fill"
+      },
+      {
+        "text": "99+",
+        "tag": "DIV",
+        "x": 257,
+        "y": 126,
+        "w": 28,
+        "h": 25,
+        "cls": "le-flex-item"
+      },
+      {
+        "text": "已办",
+        "tag": "DIV",
+        "x": 161,
+        "y": 171,
+        "w": 221,
+        "h": 22,
+        "cls": "le-flex-item le-flex-item-fill"
+      },
+      {
+        "text": "去安排   筛选    排序",
+        "tag": "DIV",
+        "x": 453,
+        "y": 30,
+        "w": 250,
+        "h": 34,
+        "cls": "le-flex-item"
+      },
+      {
+        "text": "去安排",
+        "tag": "BUTTON",
+        "x": 389,
+        "y": 35,
+        "w": 76,
+        "h": 24,
+        "cls": "ivu-btn ivu-btn-text ivu-btn-small"
+      },
+      {
+        "text": "筛选",
+        "tag": "BUTTON",
+        "x": 459,
+        "y": 35,
+        "w": 64,
+        "h": 24,
+        "cls": "ivu-btn ivu-btn-text ivu-btn-small"
+      },
+      {
+        "text": "排序",
+        "tag": "BUTTON",
+        "x": 523,
+        "y": 35,
+        "w": 64,
+        "h": 24,
+        "cls": "ivu-btn ivu-btn-text ivu-btn-small"
+      }
+    ]
+  }
+}

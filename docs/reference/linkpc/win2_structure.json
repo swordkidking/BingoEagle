@@ -1,0 +1,222 @@
+{
+  "title": "新建会话 - 会深度思考的AI助手",
+  "url": "http://127.0.0.1:12258/http_dir/static/package/agent/#/agentic/welcome",
+  "text": "新建会话\n配置\n会话\n专家\n创作\n最近会话\n请打开浏览器，访问：http://www.bing.com\n请打开浏览器，访问品高合同系统：https://contract.bingosoft.net/\n请创建一个会议\n请创建一个会议\n我们的工作目标是：根据客户在「金融机构安全管理」这个领域的业务情况，进行「全领域本体建模」\n请收集整理「面向对象」的基本理论，抽象度要高，可以有基本的软件工程实现，但不要太多。用最简洁的语言输出为《面向对象理论-LinkClaw.md》，放在\\需求\\方法论   目录下。\n可以了吗\n?\n?\n？\nHello，早上好\n\n我可以帮你读文件、写作等各种创意内容，请把你的任务交给我吧~\n\n当前为互联网区，严禁输入涉密信息，谨防泄露\n\n\n\n\n选择工作目录\nMiniMax-M2.7\nLinkClaw智能问答\n\n有问题尽管问，帮你快速上手\n\n专业助手\n\n你的虚拟设计官与效率管家\n\n全能文档专家\n\n具备专业级文档解析与排版能力\n\n第三方公有云大模型禁止上传公司敏感信息，谨防数据泄露",
+  "struct": {
+    "nav": [
+      "新建会话",
+      "配置",
+      "会话",
+      "专家",
+      "创作",
+      "最近会话",
+      "请打开浏览器，访问：http://www.bing.com",
+      "请打开浏览器，访问品高合同系统：https://contract.bingosoft.net/",
+      "请创建一个会议",
+      "我们的工作目标是：根据客户在「金融机构安全管理」这个领域的业务情况，进行「全领域本体建模」",
+      "可以了吗",
+      "?",
+      "？"
+    ],
+    "tabs": [],
+    "buttons": [
+      "新建会话",
+      "配置",
+      "会话",
+      "专家",
+      "创作"
+    ],
+    "panels": [],
+    "inputs": [
+      {
+        "type": "file",
+        "placeholder": "",
+        "id": "",
+        "name": ""
+      },
+      {
+        "type": "hidden",
+        "placeholder": "",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "headings": [
+      {
+        "tag": "H3",
+        "text": "最近会话"
+      },
+      {
+        "tag": "H1",
+        "text": "Hello，早上好"
+      },
+      {
+        "tag": "H3",
+        "text": "LinkClaw智能问答"
+      },
+      {
+        "tag": "H3",
+        "text": "专业助手"
+      },
+      {
+        "tag": "H3",
+        "text": "全能文档专家"
+      }
+    ],
+    "allItems": [
+      {
+        "text": "新建会话配置会话专家创作",
+        "tag": "DIV",
+        "x": 140,
+        "y": 126,
+        "w": 279,
+        "h": 252,
+        "cls": "top-menus"
+      },
+      {
+        "text": "新建会话",
+        "tag": "BUTTON",
+        "x": 140,
+        "y": 34,
+        "w": 255,
+        "h": 42,
+        "cls": "menu-item active"
+      },
+      {
+        "text": "配置",
+        "tag": "BUTTON",
+        "x": 140,
+        "y": 76,
+        "w": 255,
+        "h": 42,
+        "cls": "menu-item"
+      },
+      {
+        "text": "会话",
+        "tag": "BUTTON",
+        "x": 140,
+        "y": 135,
+        "w": 255,
+        "h": 42,
+        "cls": "menu-item"
+      },
+      {
+        "text": "专家",
+        "tag": "BUTTON",
+        "x": 140,
+        "y": 177,
+        "w": 255,
+        "h": 42,
+        "cls": "menu-item"
+      },
+      {
+        "text": "创作",
+        "tag": "BUTTON",
+        "x": 140,
+        "y": 219,
+        "w": 255,
+        "h": 42,
+        "cls": "menu-item"
+      },
+      {
+        "text": "请打开浏览器，访问：http://www.bing.com",
+        "tag": "DIV",
+        "x": 140,
+        "y": 314,
+        "w": 255,
+        "h": 34,
+        "cls": "thread-item"
+      },
+      {
+        "text": "请打开浏览器，访问品高合同系统：https://contract.bingosoft.net/",
+        "tag": "DIV",
+        "x": 140,
+        "y": 352,
+        "w": 255,
+        "h": 34,
+        "cls": "thread-item"
+      },
+      {
+        "text": "请创建一个会议",
+        "tag": "DIV",
+        "x": 140,
+        "y": 390,
+        "w": 255,
+        "h": 34,
+        "cls": "thread-item"
+      },
+      {
+        "text": "我们的工作目标是：根据客户在「金融机构安全管理」这个领域的业务情况，进行「全领域本体建模」",
+        "tag": "DIV",
+        "x": 140,
+        "y": 466,
+        "w": 255,
+        "h": 34,
+        "cls": "thread-item"
+      },
+      {
+        "text": "可以了吗",
+        "tag": "DIV",
+        "x": 140,
+        "y": 542,
+        "w": 255,
+        "h": 34,
+        "cls": "thread-item"
+      },
+      {
+        "text": "?",
+        "tag": "DIV",
+        "x": 140,
+        "y": 580,
+        "w": 255,
+        "h": 34,
+        "cls": "thread-item"
+      },
+      {
+        "text": "？",
+        "tag": "DIV",
+        "x": 140,
+        "y": 656,
+        "w": 255,
+        "h": 34,
+        "cls": "thread-item"
+      },
+      {
+        "text": "选择工作目录     MiniMax-M2.7",
+        "tag": "DIV",
+        "x": 823,
+        "y": 349,
+        "w": 672,
+        "h": 32,
+        "cls": "operations flex items-center w-full gap-2"
+      },
+      {
+        "text": "LinkClaw智能问答有问题尽管问，帮你快速上手",
+        "tag": "DIV",
+        "x": 584,
+        "y": 448,
+        "w": 223,
+        "h": 98,
+        "cls": "guide-card guide-card-item"
+      },
+      {
+        "text": "专业助手你的虚拟设计官与效率管家",
+        "tag": "DIV",
+        "x": 823,
+        "y": 448,
+        "w": 223,
+        "h": 98,
+        "cls": "guide-card guide-card-item"
+      },
+      {
+        "text": "全能文档专家具备专业级文档解析与排版能力",
+        "tag": "DIV",
+        "x": 1062,
+        "y": 448,
+        "w": 223,
+        "h": 98,
+        "cls": "guide-card guide-card-item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,3837 @@
+{
+  "structure": {
+    "title": "",
+    "url": "file:///Applications/%E5%93%81%E9%AB%98%E8%81%86%E5%AE%A2.app/Contents/Resources/app.asar.unpacked/src/app/html/home.html",
+    "nav": [
+      "消息",
+      "应用"
+    ],
+    "buttons": [],
+    "inputs": [
+      {
+        "type": "text",
+        "placeholder": "",
+        "name": "",
+        "id": ""
+      }
+    ],
+    "images": [],
+    "allText": [
+      {
+        "tag": "DIV",
+        "text": "预加载文本",
+        "cls": "ysbth"
+      },
+      {
+        "tag": "DIV",
+        "text": "互联网区       消息   应用",
+        "cls": "flex-container flex-row"
+      },
+      {
+        "tag": "DIV",
+        "text": "互联网区",
+        "cls": "ai-workspace-area"
+      },
+      {
+        "tag": "DIV",
+        "text": "消息   应用",
+        "cls": "ai-nav-content"
+      },
+      {
+        "tag": "SPAN",
+        "text": "消息",
+        "cls": "nav-text"
+      },
+      {
+        "tag": "SPAN",
+        "text": "应用",
+        "cls": "nav-text"
+      },
+      {
+        "tag": "DIV",
+        "text": "消息(94)",
+        "cls": "menuItem"
+      },
+      {
+        "tag": "DIV",
+        "text": "待办(99+)",
+        "cls": "menuItem"
+      },
+      {
+        "tag": "DIV",
+        "text": "分组",
+        "cls": "drawer-title"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "全部",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "94",
+        "cls": "num"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "@我",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "未读",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "智能体",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "单聊",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "2",
+        "cls": "num"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "群组",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "13",
+        "cls": "num"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "工作",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "46",
+        "cls": "num"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "服务",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "33",
+        "cls": "num"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "会议",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "",
+        "cls": "icomoon-font"
+      },
+      {
+        "tag": "SPAN",
+        "text": "售前项目",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "1",
+        "cls": "num"
+      },
+      {
+        "tag": "SPAN",
+        "text": "实施项目",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "研发项目",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "部门项目",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "标签",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "重点会话",
+        "cls": "name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "未读(94)",
+        "cls": ""
+      },
+      {
+        "tag": "SPAN",
+        "text": "单聊(2)",
+        "cls": ""
+      },
+      {
+        "tag": "SPAN",
+        "text": "群组(13)",
+        "cls": ""
+      },
+      {
+        "tag": "SPAN",
+        "text": "工作(46)",
+        "cls": ""
+      },
+      {
+        "tag": "SPAN",
+        "text": "服务(33)",
+        "cls": ""
+      },
+      {
+        "tag": "DIV",
+        "text": "暂无会话",
+        "cls": "chat-nosession"
+      },
+      {
+        "tag": "SPAN",
+        "text": "×",
+        "cls": "close"
+      },
+      {
+        "tag": "H3",
+        "text": "待办中心\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/04/07",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "9",
+        "cls": "ext jse-unread"
+      },
+      {
+        "tag": "H3",
+        "text": "部门例会工作组\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "团队",
+        "cls": "nameTic nc-group"
+      },
+      {
+        "tag": "DIV",
+        "text": "我:\n                                            @翁灿城 好的，尽快补上吧 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "产品经理工作组\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/04/03",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "聆客公有云运维\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "毛锦强:\n                                            Q1可用率：100% [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "全领域协作需求组\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/18",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "邮箱\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "10:23",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "余佩",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "10:07",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "晓光哥，看看这个，加上案例的话还比较多页，不过案例那边页数多～ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "钟涛",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "10:01",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "订阅号",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "01:48",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "蒋勇",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "品高龙虾养殖群（内测）\n                                        团队",
+        "cls": "nickname"
+      },
+      {
+        "tag": "DIV",
+        "text": "4",
+        "cls": "ext jse-unread"
+      },
+      {
+        "tag": "H3",
+        "text": "赵东明",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "CRM与ERP\n                                        群组",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "蒋彪",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "冯华敏",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "新合同系统V1.0进展沟通会\n                                        会议",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "实施项目\n                                        集合",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "集合",
+        "cls": "nameTic nc-service"
+      },
+      {
+        "tag": "H3",
+        "text": "邓黎雄",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "在线运营部-绩效讨论群\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "邓黎雄把贺嘉文加入了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "项目助手\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "罗华安",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "行政聆距离\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "各位同事早上好！温馨提醒：周六已完成消杀，现请及时清洗个人水杯~  [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "假勤\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/04/06",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "您的使用小结\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "DIV",
+        "text": "10",
+        "cls": "ext jse-unread"
+      },
+      {
+        "tag": "H3",
+        "text": "日历助手\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/04/05",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "Claw研讨会群组\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/04/04",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "你已解散了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "平台架构会\n                                        会议",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "魏明慧",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "夏萌",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "嗯嗯，好的~ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "钟楚筠",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "[文件]6-云集成交付中心-在线运营部-2026Q1组织绩效考核表（自评版）_.xlsx [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "HR  e  点通\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "【绩效】请完成：团队绩效负责人_目标审核 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "周静",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的，我今天没有外出计划 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "品高IT\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "安居项目招标沟通群\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/04/02",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "梁颖怡:\n                                            那就先给这个材料，看看他们的意见 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "王玉慧",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "没事 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "魏玲",
+        "cls": "avatar"
+      },
+      {
+        "tag": "DIV",
+        "text": "晓光经理，下午好！原在线运营部Q1组织绩效评估，看到还未发出，请您得空处理下哈，谢谢！ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "梁颖怡",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "好 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "苏家荣",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "苏家荣撤回了一条消息 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "低代码开发-小试牛刀\n                                        团队",
+        "cls": "nickname"
+      },
+      {
+        "tag": "DIV",
+        "text": "99+",
+        "cls": "ext jse-unread noDisturb"
+      },
+      {
+        "tag": "H3",
+        "text": "任思欣",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/04/01",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "谭智慧",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "晓光哥，这个我还没体验过 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "新合同系统实施侧专场培训会议\n                                        会议",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "刘春丽:\n                                            再等2分钟哈，请大家抓紧 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "合同系统提醒\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "合同到账通知 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "欣欣",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "刘欣欣",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的，稍等，我准备进停车场 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "财神MM\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/31",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "收好云票夹最佳攻略，效率直接拉满！ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "翁灿城",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "OK [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "张凑喜,魏明慧,钟涛\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "魏明慧:\n                                            好  [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "云盘\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "共享协作通知 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "品高数智化工作会议\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/30",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "赵东明:\n                                            还有[图片] 这10个系统的API接口还没拿到，预计要明天下班时能拿到 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "庞增媚",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "看到了 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "慧颖",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "马慧颖",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "城轨云项目讨论群\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/28",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "陈光兴退出了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "关于地铁Glink开发培训\n                                        群组",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "梁思楚,于晓光,徐巍\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/27",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "梁思楚:\n                                            可以啊，这样很简单好操作 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "保密教育\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "【福利】大礼包来啦！ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,尹希仁,李强\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "李强已解散了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,李强,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,于晓光,余佩\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,李强,李秀玲\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,李莹,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,张春飞,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "三级等保相关\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,肖红,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,钟涛,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,余佩,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩,于晓光,李强\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "福州地铁运维页面需求\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "余榕栩把群转让给了你 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "傅梁生",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "品高AI场景落地\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/26",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "余榕栩",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "品高业务系统调研\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "邓进丹:\n                                            @于晓光 已经授权了。 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "晓明",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "孙晓明",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "如果麻烦的话就算了 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "余龙生",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "嗯嗯，1周左右，第一版上线，目前更新到生产了，行政，IT 在联合测试，不日会对外公开。  [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "AI视频智能体POC沟通群\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "楚梦阳把唐柳加入了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "邱铭灿",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/25",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "不忙的时候来一下我这里 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "贺嘉文",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "收到 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "陈悦凯",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "何智勇",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "吴盈佳",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/24",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "品高部门经理群\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "邓进丹",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "梁思楚",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "蒋娟飞",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "在线聆客运维决策组\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "品高快报\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/23",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "[图片] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "肖芬",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "林家乐",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "[文件]ztaLogs [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "数据湖全领域模型数据同步新合同系统沟通群\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "毛锦强",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "这个环境还没有，周末都是在配置生产的 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "运营项目工作量模型&AI讨论组\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/21",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "罗华安:\n                                            测试环境通用密码 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "香港移动数据治理会议\n                                        会议",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "会议助理小聆:\n                                            会议已结束 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "楚梦阳",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/20",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "另外再确认一下，我要讲解演示哪些内容？ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "李伟文",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/19",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "胡柳",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "[语音] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "陈奎",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "24年2月份的时候产生的 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "唐春凤",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "亚超",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "郭亚超",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "我只有PPT没有word [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "晏陈辉",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "你先参与进来，加一下我的微信：YuX007009，我拉你进三所的项目群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "景先",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "廖景先",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/17",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "数字化本体架构学习讨论\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/15",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "周静:\n                                            [文件]AI时代数字法院建设方法论.pdf [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "数据字化品高管理组\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/13",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "会议助理小聆:\n                                            会议即将开始 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "刚强",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "刘刚强",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的  [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "邹龙明",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "[草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "凑喜",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "张凑喜",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/10",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "李伟明\n                                        外部",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "外部",
+        "cls": "nameTic nc-external"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/09",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "[文件]监管业务全领域建模最佳实践_v4.pptx [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "零代码项目组\n                                        团队",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/03",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "28",
+        "cls": "ext jse-unread"
+      },
+      {
+        "tag": "H3",
+        "text": "吴璇",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/03/02",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的好的 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "罗洁",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "EXT_罗洁",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "Link\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "安装包 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "医药行业本体建模\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/28",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "吴盈佳把罗伟--levy加入了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "芷婷",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "何芷婷",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/27",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "丽霜",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "谢丽霜",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/25",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "晓光经理，新年好~刘刚强的劳动合同预计于2026/3/15到期，之前部门提供的优化名单中有他，因此想问下部门预计什么时间处理？[图片] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "韩春阳",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/24",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "[图片]光哥新年好，有一条超时审批的工作量麻烦审批一下 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "GlinkURL版本群\n                                        团队",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/16",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "志远",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "曹志远",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/12",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的，有劳 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "萌馨",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "韦萌馨",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/11",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "唐柳",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/09",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "项目管理数据需求沟通会议\n                                        会议",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/07",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "李强",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/05",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "嗯，我撤回了 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "非凡",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "赵非凡",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/04",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "播云客\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "灵感捕手上线！这款“能动手”的小龙虾，或许能帮你省下2小时！ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "武大吉奥对接\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/03",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "邹龙明已解散了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "品高广州云集成交付中心在线运营部\n                                        部门",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "部门",
+        "cls": "nameTic nc-org"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/02/02",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "我:\n                                            @全体成员 如有人不参加年会，请于今天下班前私聊通知我 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "文超",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/28",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "你来吧 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "GA监管域建模小组\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "长春ZZ筹划\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/27",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "刘玲",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/26",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "不客气 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "微问卷\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/22",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "【创意问卷】品高2026人工智能应用技能大赛——创意征集赛 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "区柏荣",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "昨天也跟他沟通了。 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "楚荧",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "张楚荧",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "这个要看我们领导的安排哈，具体什么时候发放我不清楚喔 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "特批系统(采购相关)需求评审\n                                        会议",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/20",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "赵非凡:\n                                            ok [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "武扬",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/19",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "新华社售前讨论组\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "我:\n                                            好的 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "云集成交付中心项目经理交流群\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "PMO-M群2\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/15",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "品高新合同系统-UI讨论群\n                                        群组",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/12",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "11",
+        "cls": "ext jse-unread"
+      },
+      {
+        "tag": "H3",
+        "text": "刘茜",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "品高跟丸美，有签合作协议吗 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "差旅\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "26/01/07",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "3",
+        "cls": "ext jse-unread"
+      },
+      {
+        "tag": "H3",
+        "text": "ga业务模型\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/30",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "周静:\n                                            [文件]广东公安治安数仓模型.drawio [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "PMO-M群\n                                        团队",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/25",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "陈佳伦",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/24",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "杨小松",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/22",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "没事,合同出来后,我先加周强微信 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "刘春丽,于晓光,罗华安\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/18",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "品高工会\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/16",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "科技园总工会电影票 中奖人员请按时领取 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "公安部第三研究所项目沟通群\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/12",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "蒋娟飞:\n                                            @晏陈辉  [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "资讯精选\n                                        服务",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/09",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "徐海波",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/05",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "聆客在线运营\n                                        项目",
+        "cls": "nickname"
+      },
+      {
+        "tag": "SPAN",
+        "text": "项目",
+        "cls": "nameTic nc-group"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/04",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "公安部IT基础模型建模群\n                                        团队",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "黄刚",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/12/03",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "会议通知群\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/26",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "冯华敏:\n                                            [文件]【告别“数据后视镜”：Palantir+战略价值与落地案例分享】电子书.pdf [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "李敬伟",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/24",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "周静,梁颖怡,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/22",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "我:\n                                            @周静 那就把方案整合好先放着，看后面什么时候能用上 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "黄洁凤",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/21",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的，谢谢 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "李颖Sunny",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/19",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "邱国炜",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "好吧 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "黄洁莹",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/12",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "目前其他同事也说可以  要具体看看是为什么你的不行  会不会网络不好之类的  退出重新试试看 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "刘泽灿",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/10",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "我现在方便  [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "售前项目\n                                        集合",
+        "cls": "nickname"
+      },
+      {
+        "tag": "H3",
+        "text": "吕剑奔",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "中航国有资产研究院项目支持空间\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/08",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "程勇:\n                                            @武扬 周二杨阳总电话会议纪要。 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "模型设计团队\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/06",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "周静:\n                                            [图片] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "业务系统数据融合讨论会议\n                                        会议",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/11/05",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "于晓光,梁思楚,罗华安\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/29",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "梁思楚:\n                                            @罗华安 需要，其时已经有合同文本可以上传的 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "于晓光,余榕栩,邓黎雄\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/27",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "品高云家的小表妹",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/25",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "陈奎,邱国炜,冯华敏\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/22",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "冯伟聪把邹宁加入了群 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "CMP\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/20",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "【资源申请流程】云平台【邓黎雄】的工单【广垦OA系统-开发环境部署资源申请】需要您进行处理! [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "新合同系统上线沟通群\n                                        团队",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/17",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "邓黎雄:\n                                            @全体成员 各位好，附件是会议上讲的新合同系统开发计划，请各位查收，谢谢。 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "刘春丽",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "谭颖",
+        "cls": "avatar"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/14",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "蔡凯茜",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/13",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "马上来 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "数据湖6.0和智能体在品高数字化应用\n                                        实施项目",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "余龙生:\n                                            上面通过ide里面的新建业务域的功能创建出来的 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "DeepSeek满血版\n                                        智能体",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "hi，我是你的DeepSeek(满血版)助理，内置互联网DeepSeek (满血版)模型，可以帮你读文件、写作等各种创意内容，请把你的任务交给我吧！ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "通知公告\n                                        服务",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/10",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "制度 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "数字化品高-审批流程\n                                        项目",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/10/09",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "邓黎雄:\n                                            [聊天记录] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "张春飞",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/29",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "可能有差异，而且跟低代码平台也没打通，落地时用不了 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "张丽",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/26",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "梁思楚,于晓光,赵东明\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/19",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "赵东明:\n                                            @梁思楚 那是不是我们先在当前合同系统解决这个问题先？ [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "江婷",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/18",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "梁晓东",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "张庆婷",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/11",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "方媛筠",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "H3",
+        "text": "袁晶jim,余榕栩,于晓光\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/05",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "胡美萱:\n                                            ok [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "20250904-部门羽毛球\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/04",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "余榕栩修改群名为\"20250904-部门羽毛球\" [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "H3",
+        "text": "李弟",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/09/02",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "数据资源、数据服务授权验证计划\n                                        会议",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/08/30",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "司丽,曹志远,李敬伟\n                                        群组",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/08/27",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "司丽:\n                                            @吴盈佳 欢迎回归，下午方便时找我签名哈 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "DIV",
+        "text": "艳莹",
+        "cls": "avatar"
+      },
+      {
+        "tag": "H3",
+        "text": "李艳莹",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/08/20",
+        "cls": "time"
+      },
+      {
+        "tag": "H3",
+        "text": "司丽",
+        "cls": "nickname noPaddingRight"
+      },
+      {
+        "tag": "DIV",
+        "text": "好的我现在过来 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "25/08/05",
+        "cls": "time"
+      },
+      {
+        "tag": "DIV",
+        "text": "位赛举撤回了一条消息 [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "待办中心",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "待***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "部门例会工作组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "部******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "我:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "产品经理工作组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "产******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "聆客公有云运维",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "聆******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "毛锦强:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "全领域协作需求组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "全*******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "罗华安:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "邮箱",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "邮*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "[文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "钟*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "订**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "蒋*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高龙虾养殖群（内测）",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品**********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "赵**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "CRM与ERP",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "C******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "冯**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "新合同系统V1.0进展沟通会",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "新*************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "实***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "邓**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "在线运营部-绩效讨论群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "在**********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "项目助手",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "项***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "罗**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "行政聆距离",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "行****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "假勤",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "假*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "您的使用小结",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "您*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "日历助手",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "日***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Claw研讨会群组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "C********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "平台架构会",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "平****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "魏**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "夏*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "钟**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "HR  e  点通",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "H********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "周*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高IT",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "安居项目招标沟通群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "安********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "梁颖怡:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "王**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "魏*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "梁**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "苏**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "低代码开发-小试牛刀",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "低*********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "任**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "谭**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "新合同系统实施侧专场培训会议",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "DIV",
+        "text": "刘春丽:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "合同系统提醒",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "合*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "刘**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "财神MM",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "财***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "翁**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "张凑喜,魏明慧,钟涛",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "张**,魏**,钟*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "魏明慧:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "云盘",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "云*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高数智化工作会议",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "庞**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "马**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "城轨云项目讨论群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "城*******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "关于地铁Glink开发培训",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "关************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "梁思楚,于晓光,徐巍",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "梁**,于**,徐*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "梁思楚:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "保密教育",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "保***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,尹希仁,李强",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,尹**,李*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,李强,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,李*,于**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,于晓光,余佩",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,于**,余*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,李强,李秀玲",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,李*,李**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,李莹,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,张春飞,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,张**,于**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "三级等保相关",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "三*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,肖红,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,肖*,于**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,钟涛,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,钟*,于**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,余佩,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,余*,于**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余榕栩,于晓光,李强",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**,于**,李*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "福州地铁运维页面需求",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "福*********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "傅**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高AI场景落地",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品*******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "翁灿城:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "余**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高业务系统调研",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "DIV",
+        "text": "邓进丹:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "孙**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "AI视频智能体POC沟通群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "A************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "邱**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "贺**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "陈**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "何**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "吴**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高部门经理群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "吕剑奔:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "蒋**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "在线聆客运维决策组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "在********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "李强:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高快报",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "肖*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "林**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数据湖全领域模型数据同步新合同系统沟通群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数*******************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "毛**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "运营项目工作量模型&AI讨论组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "运**************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "香港移动数据治理会议",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "香*********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "会议助理小聆:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "楚**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "李**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "胡*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "陈*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "唐**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "郭**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "晏**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "廖**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数字化本体架构学习讨论",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数**********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数据字化品高管理组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "邹**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "张**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "李伟明",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "零代码项目组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "零*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "吴*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "E*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Link",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "L***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "医药行业本体建模",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "医*******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "谢**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "韩**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "GlinkURL版本群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "G**********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "曹**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "韦**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "唐*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "项目管理数据需求沟通会议",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "项***********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "李*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "播云客",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "播**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "武大吉奥对接",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "武*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高广州云集成交付中心在线运营部",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品***************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "文*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "GA监管域建模小组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "G********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "邓黎雄:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "长春ZZ筹划",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "长*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "余佩:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "刘*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "微问卷",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "微**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "区**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "特批系统(采购相关)需求评审",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "特*************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "赵非凡:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "武*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "新华社售前讨论组",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "新*******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "云集成交付中心项目经理交流群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "云*************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "唐春凤:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "PMO-M群2",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "P******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "曹志远:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高新合同系统-UI讨论群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "差旅",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "差*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "ga业务模型",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "g*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "PMO-M群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "P*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "杨**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "刘春丽,于晓光,罗华安",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "刘**,于**,罗**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "品高工会",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "公安部第三研究所项目沟通群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "公************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "蒋娟飞:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "资讯精选",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "资***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "徐**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "聆客在线运营",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "聆*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "公安部IT基础模型建模群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "公***********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "黄*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "会议通知群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "会****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "周静,梁颖怡,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "周*,梁**,于**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "黄**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "李******",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "售***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "吕**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "中航国有资产研究院项目支持空间",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "中**************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "程勇:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "模型设计团队",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "模*****",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "业务系统数据融合讨论会议",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "业***********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "于晓光,梁思楚,罗华安",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "于**,梁**,罗**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "于晓光,余榕栩,邓黎雄",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "于**,余**,邓**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "陈奎,邱国炜,冯华敏",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "陈*,邱**,冯**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "CMP",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "C**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "新合同系统上线沟通群",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "新*********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "谭*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "蔡**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数据湖6.0和智能体在品高数字化应用",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数*****************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "余龙生:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "DeepSeek满血版",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "D**********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "通知公告",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "通***",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数字化品高-审批流程",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数*********",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "张*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "梁思楚,于晓光,赵东明",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "梁**,于**,赵**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "赵东明:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "江*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "方**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "袁晶jim,余榕栩,于晓光",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "袁****,余**,于**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "胡美萱:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "20250904-部门羽毛球",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "2*************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数据资源、数据服务授权验证计划",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "数**************",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "司丽,曹志远,李敬伟",
+        "cls": "sessionName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "司*,曹**,李**",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "DIV",
+        "text": "司丽:\n                                            [文本] [草稿]",
+        "cls": "flexrow-box margin-top3"
+      },
+      {
+        "tag": "SPAN",
+        "text": "司*",
+        "cls": "sessionDesensitizationName"
+      },
+      {
+        "tag": "SPAN",
+        "text": "待办(1)",
+        "cls": "active"
+      },
+      {
+        "tag": "SPAN",
+        "text": "待阅(99+)",
+        "cls": ""
+      },
+      {
+        "tag": "SPAN",
+        "text": "已办",
+        "cls": ""
+      },
+      {
+        "tag": "DIV",
+        "text": "按提交时间 按优先级 按来源系统",
+        "cls": "ivu-select-dropdown"
+      },
+      {
+        "tag": "DIV",
+        "text": "暂无待办/待阅  请审批人员考勤异常申请-2026年03月27日   广州品高 假勤系统  03-27 10:09",
+        "cls": "chatbody todobody"
+      },
+      {
+        "tag": "DIV",
+        "text": "暂无待办/待阅",
+        "cls": "chat-nosession"
+      },
+      {
+        "tag": "SPAN",
+        "text": "请审批人员考勤异常申请-2026年03月27日",
+        "cls": "card-title"
+      },
+      {
+        "tag": "DIV",
+        "text": "广州品高",
+        "cls": "card-tags"
+      },
+      {
+        "tag": "SPAN",
+        "text": "假勤系统",
+        "cls": "todo-source"
+      },
+      {
+        "tag": "DIV",
+        "text": "应用    通讯录    云盘    动态    日程    协作",
+        "cls": "ivu-select-dropdown ivu-dropdown-transfer ai-nav-d"
+      },
+      {
+        "tag": "SPAN",
+        "text": "通讯录",
+        "cls": "nav-dropdown-item-name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "动态",
+        "cls": "nav-dropdown-item-name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "日程",
+        "cls": "nav-dropdown-item-name"
+      },
+      {
+        "tag": "SPAN",
+        "text": "协作",
+        "cls": "nav-dropdown-item-name"
+      }
+    ]
+  },
+  "clickables": [
+    {
+      "text": "消息   应用",
+      "tag": "UL",
+      "x": 683,
+      "y": 21,
+      "w": 186,
+      "h": 32,
+      "cls": "ai-nav-menu"
+    },
+    {
+      "text": "消息",
+      "tag": "LI",
+      "x": 668,
+      "y": 21,
+      "w": 52,
+      "h": 28,
+      "cls": ""
+    },
+    {
+      "text": "应用",
+      "tag": "LI",
+      "x": 720,
+      "y": 21,
+      "w": 52,
+      "h": 28,
+      "cls": ""
+    }
+  ],
+  "body_text": "预加载文本\n互联网区\n消息\n应用"
+}

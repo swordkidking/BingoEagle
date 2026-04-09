@@ -1,0 +1,621 @@
+{
+  "text": "预加载文本\n消息\n协作\n任务\n我的一天\n工作空间\n个人空间\n全部任务\n74\n工作台面\n新版品高应用工场\n项目\n全领域协作套件-项目管理模块\n项目\n广州地铁督办协作平台\n项目\n全领域协作套件-客户关系管理CRM模块\n项目\n数字化品高-CRM系统\n项目\n新华社协作平台\n项目\n 新建\n我的一天\n4月8日 周三\n\n今天没有任务。\n提前安排一下工作吧!\n四月 2026\n一\n二\n三\n四\n五\n六\n日\n30\n31\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n今天为您推荐如下内容\n测试任务\n于晓光\nBingo&nbsp;Account与线上用户留痕的整合\n天\n马笑天\n项目协作回归聆客\n于晓光\n品高每日填报工作量的需求\n于晓光\n配置【合同原件外借流程】、【合同盖章特批流程】应用\n杰\n宋世杰\n项目协作需求评审\n于晓光\n客户方评审实施方案\n08-31 23:59\n于晓光\n与业务部门HR沟通\n于晓光\n【任务协作】任务通知提醒，选择参与人后，通过服务号推送，但是用户看到很懵，不知道从哪里来的信息，需要优化，直接往空间投递，提供空间待办功能\n提需人：晓光哥\n功能优化\n余佩\n【协作空间】空间自定义组件及添加扩展组件设计器\n提需人：周总\n新需求\n余佩\n【通讯录】CRM相关联系人，可以同步至link联系人这里，之后会议参与人，支持选择外部联系人，同时允许通过邮箱或短信通知对方\n提需人：周总\n新需求\n余佩\n【PC端导航】切换后，每个界面标题与内容对齐规范，特别通讯录界面样式优化\n提需人：周总\nUI体验\n余佩\n企业管理套件市场材料策划\n12-31 23:59\n罗华安\n项目管理、CRM系统对接验证\n11-30 13:30\n1\n于晓光\n测试任务\n于晓光",
+  "items": [
+    {
+      "text": "预加载文本",
+      "x": -200,
+      "y": 0,
+      "cls": "ysbth",
+      "tag": "DIV"
+    },
+    {
+      "text": "消息",
+      "x": 654,
+      "y": 9,
+      "cls": "nav-text",
+      "tag": "SPAN"
+    },
+    {
+      "text": "协作",
+      "x": 706,
+      "y": 9,
+      "cls": "nav-text",
+      "tag": "SPAN"
+    },
+    {
+      "text": "任务",
+      "x": 16,
+      "y": 50,
+      "cls": "flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "我的一天",
+      "x": 42,
+      "y": 96,
+      "cls": "nav-name u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "工作空间",
+      "x": 42,
+      "y": 136,
+      "cls": "nav-name u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "个人空间",
+      "x": 42,
+      "y": 176,
+      "cls": "nav-name u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "全部任务",
+      "x": 42,
+      "y": 216,
+      "cls": "nav-name u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "74",
+      "x": 199,
+      "y": 216,
+      "cls": "task-count",
+      "tag": "SPAN"
+    },
+    {
+      "text": "工作台面",
+      "x": 0,
+      "y": 259,
+      "cls": "worktop-title",
+      "tag": "DIV"
+    },
+    {
+      "text": "新版品高应用工场",
+      "x": 47,
+      "y": 289,
+      "cls": "nav-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "项目",
+      "x": 192,
+      "y": 291,
+      "cls": "worktop-tag",
+      "tag": "SPAN"
+    },
+    {
+      "text": "全领域协作套件-项目管理模块",
+      "x": 47,
+      "y": 329,
+      "cls": "nav-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "广州地铁督办协作平台",
+      "x": 47,
+      "y": 369,
+      "cls": "nav-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "全领域协作套件-客户关系管理CRM模块",
+      "x": 47,
+      "y": 409,
+      "cls": "nav-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "数字化品高-CRM系统",
+      "x": 47,
+      "y": 449,
+      "cls": "nav-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "新华社协作平台",
+      "x": 47,
+      "y": 489,
+      "cls": "nav-name",
+      "tag": "SPAN"
+    },
+    {
+      "text": "新建",
+      "x": 27,
+      "y": 884,
+      "cls": "",
+      "tag": "SPAN"
+    },
+    {
+      "text": "4月8日 周三",
+      "x": 362,
+      "y": 58,
+      "cls": "text text-single-line",
+      "tag": "SPAN"
+    },
+    {
+      "text": "今天没有任务。",
+      "x": 622,
+      "y": 576,
+      "cls": "text u-text-middle u-text-bold",
+      "tag": "SPAN"
+    },
+    {
+      "text": "提前安排一下工作吧!",
+      "x": 622,
+      "y": 608,
+      "cls": "text u-grey",
+      "tag": "SPAN"
+    },
+    {
+      "text": "四月 2026",
+      "x": 1132,
+      "y": 113,
+      "cls": "vc-title",
+      "tag": "DIV"
+    },
+    {
+      "text": "一",
+      "x": 1121,
+      "y": 169,
+      "cls": "vc-weekday",
+      "tag": "DIV"
+    },
+    {
+      "text": "二",
+      "x": 1155,
+      "y": 169,
+      "cls": "vc-weekday",
+      "tag": "DIV"
+    },
+    {
+      "text": "三",
+      "x": 1190,
+      "y": 169,
+      "cls": "vc-weekday",
+      "tag": "DIV"
+    },
+    {
+      "text": "四",
+      "x": 1224,
+      "y": 169,
+      "cls": "vc-weekday",
+      "tag": "DIV"
+    },
+    {
+      "text": "五",
+      "x": 1258,
+      "y": 169,
+      "cls": "vc-weekday",
+      "tag": "DIV"
+    },
+    {
+      "text": "六",
+      "x": 1292,
+      "y": 169,
+      "cls": "vc-weekday",
+      "tag": "DIV"
+    },
+    {
+      "text": "日",
+      "x": 1327,
+      "y": 169,
+      "cls": "vc-weekday",
+      "tag": "DIV"
+    },
+    {
+      "text": "30",
+      "x": 1121,
+      "y": 196,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "31",
+      "x": 1155,
+      "y": 196,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "1",
+      "x": 1190,
+      "y": 196,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "2",
+      "x": 1224,
+      "y": 196,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "3",
+      "x": 1258,
+      "y": 196,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "4",
+      "x": 1292,
+      "y": 196,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "5",
+      "x": 1327,
+      "y": 196,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "6",
+      "x": 1121,
+      "y": 228,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "7",
+      "x": 1155,
+      "y": 228,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "8",
+      "x": 1190,
+      "y": 228,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "9",
+      "x": 1224,
+      "y": 228,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "10",
+      "x": 1258,
+      "y": 228,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "11",
+      "x": 1292,
+      "y": 228,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "12",
+      "x": 1327,
+      "y": 228,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "13",
+      "x": 1121,
+      "y": 260,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "14",
+      "x": 1155,
+      "y": 260,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "15",
+      "x": 1190,
+      "y": 260,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "16",
+      "x": 1224,
+      "y": 260,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "17",
+      "x": 1258,
+      "y": 260,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "18",
+      "x": 1292,
+      "y": 260,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "19",
+      "x": 1327,
+      "y": 260,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "20",
+      "x": 1121,
+      "y": 292,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "21",
+      "x": 1155,
+      "y": 292,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "22",
+      "x": 1190,
+      "y": 292,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "23",
+      "x": 1224,
+      "y": 292,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "24",
+      "x": 1258,
+      "y": 292,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "25",
+      "x": 1292,
+      "y": 292,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "26",
+      "x": 1327,
+      "y": 292,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "27",
+      "x": 1121,
+      "y": 324,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "28",
+      "x": 1155,
+      "y": 324,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "29",
+      "x": 1190,
+      "y": 324,
+      "cls": "vc-day-content vc-focusable",
+      "tag": "SPAN"
+    },
+    {
+      "text": "今天为您推荐如下内容",
+      "x": 922,
+      "y": 52,
+      "cls": "text rec-title",
+      "tag": "SPAN"
+    },
+    {
+      "text": "测试任务",
+      "x": 951,
+      "y": 111,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "于晓光",
+      "x": 963,
+      "y": 142,
+      "cls": "text-single-line ml-xs",
+      "tag": "SPAN"
+    },
+    {
+      "text": "Bingo&nbsp;Account与线上用户留痕的整合",
+      "x": 951,
+      "y": 199,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "天",
+      "x": 935,
+      "y": 231,
+      "cls": "avatar lastStr inline-block flex-shrink-0 u-avatar",
+      "tag": "SPAN"
+    },
+    {
+      "text": "马笑天",
+      "x": 963,
+      "y": 231,
+      "cls": "text-single-line ml-xs",
+      "tag": "SPAN"
+    },
+    {
+      "text": "项目协作回归聆客",
+      "x": 951,
+      "y": 288,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "品高每日填报工作量的需求",
+      "x": 951,
+      "y": 376,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "配置【合同原件外借流程】、【合同盖章特批流程】应用",
+      "x": 951,
+      "y": 463,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "杰",
+      "x": 935,
+      "y": 515,
+      "cls": "avatar lastStr inline-block flex-shrink-0 u-avatar",
+      "tag": "SPAN"
+    },
+    {
+      "text": "宋世杰",
+      "x": 963,
+      "y": 515,
+      "cls": "text-single-line ml-xs",
+      "tag": "SPAN"
+    },
+    {
+      "text": "项目协作需求评审",
+      "x": 951,
+      "y": 572,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "客户方评审实施方案",
+      "x": 953,
+      "y": 661,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "08-31 23:59",
+      "x": 951,
+      "y": 692,
+      "cls": "u-pl-3",
+      "tag": "SPAN"
+    },
+    {
+      "text": "与业务部门HR沟通",
+      "x": 951,
+      "y": 778,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "提需人：晓光哥",
+      "x": 935,
+      "y": 917,
+      "cls": "tag blue-one",
+      "tag": "SPAN"
+    },
+    {
+      "text": "功能优化",
+      "x": 1036,
+      "y": 917,
+      "cls": "tag orange",
+      "tag": "SPAN"
+    },
+    {
+      "text": "余佩",
+      "x": 963,
+      "y": 947,
+      "cls": "text-single-line ml-xs",
+      "tag": "SPAN"
+    },
+    {
+      "text": "【协作空间】空间自定义组件及添加扩展组件设计器",
+      "x": 951,
+      "y": 1004,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "提需人：周总",
+      "x": 935,
+      "y": 1036,
+      "cls": "tag blue-one",
+      "tag": "SPAN"
+    },
+    {
+      "text": "新需求",
+      "x": 1024,
+      "y": 1036,
+      "cls": "tag blue",
+      "tag": "SPAN"
+    },
+    {
+      "text": "【PC端导航】切换后，每个界面标题与内容对齐规范，特别通讯录界面样式优化",
+      "x": 951,
+      "y": 1260,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "UI体验",
+      "x": 1024,
+      "y": 1312,
+      "cls": "tag orange-two",
+      "tag": "SPAN"
+    },
+    {
+      "text": "企业管理套件市场材料策划",
+      "x": 951,
+      "y": 1399,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "12-31 23:59",
+      "x": 951,
+      "y": 1430,
+      "cls": "u-pl-3",
+      "tag": "SPAN"
+    },
+    {
+      "text": "罗华安",
+      "x": 963,
+      "y": 1459,
+      "cls": "text-single-line ml-xs",
+      "tag": "SPAN"
+    },
+    {
+      "text": "项目管理、CRM系统对接验证",
+      "x": 951,
+      "y": 1516,
+      "cls": "text u-lines2 task-title-span u-flex-1",
+      "tag": "SPAN"
+    },
+    {
+      "text": "11-30 13:30",
+      "x": 951,
+      "y": 1547,
+      "cls": "u-pl-3",
+      "tag": "SPAN"
+    }
+  ]
+}
